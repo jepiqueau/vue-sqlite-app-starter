@@ -11,18 +11,24 @@
           <ion-title size="large">Tab 2</ion-title>
         </ion-toolbar>
       </ion-header>
-      
-      <ExploreContainer name="Tab 2 page" />
+      <ion-button @click="() => router.push('/databasenoencryption')">DatabaseNoEncryption</ion-button>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
+                                            IonButton } from '@ionic/vue';
+  import { defineComponent } from 'vue';
+  import { useRouter } from 'vue-router';
 
-export default  {
-  name: 'Tab2',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+  export default defineComponent({
+    name: 'Tab2',
+    components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,
+                  IonButton },
+    setup() {
+      const router = useRouter();
+      return { router };
+    }
+  })
 </script>
