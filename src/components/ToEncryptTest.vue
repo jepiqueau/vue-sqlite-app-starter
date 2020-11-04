@@ -90,7 +90,7 @@ export default defineComponent({
                 return false;
             }
             // Close the Database
-            result = await close("test-sqlite")
+            result = await close("test-encryption")
             if(!result.result) {
                 log.value = log.value
                             .concat(" Failed to close the database\n");
@@ -123,7 +123,7 @@ export default defineComponent({
                 return false;
             }
             // Close the Database
-            result = await close("test-sqlite")
+            result = await close("test-encryption")
             if(!result.result) {
                 log.value = log.value
                             .concat(" Failed to close the database\n");

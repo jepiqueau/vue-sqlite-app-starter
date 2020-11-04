@@ -5,6 +5,8 @@ import DatabaseNoEncryption from "@/views/DatabaseNoEncryption.vue";
 import DatabaseExecuteSet from "@/views/DatabaseExecuteSet.vue";
 import DatabaseToEncrypt from "@/views/DatabaseToEncrypt.vue";
 import DatabaseFromToJson from "@/views/DatabaseFromToJson.vue";
+import DatabaseEncrypted from "@/views/DatabaseEncrypted.vue";
+import DatabaseUpgradeVersion from "@/views/DatabaseUpgradeVersion.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -51,8 +53,18 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/databasefromtojson",
-    name: "Databasefromtojson",
+    name: "DatabaseFromToJson",
     component: DatabaseFromToJson,
+  },
+  {
+    path: "/databaseencrypted",
+    name: "DatabaseEncrypted",
+    component: DatabaseEncrypted,
+  },
+  {
+    path: "/databaseupgradeversion",
+    name: "DatabaseUpgradeVersion",
+    component: DatabaseUpgradeVersion,
   },
   {
     path: "/:catchAll(.*)",

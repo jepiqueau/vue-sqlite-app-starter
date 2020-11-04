@@ -1,6 +1,6 @@
 {
   "name": "vue-sqlite-app-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "update": "npm install --save @capacitor-community/sqlite@latest --save-dev vue-sqlite-hook@latest",
