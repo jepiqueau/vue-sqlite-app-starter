@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue'
 import DatabaseNoEncryption from "@/views/DatabaseNoEncryption.vue";
+import DatabaseExecuteSet from "@/views/DatabaseExecuteSet.vue";
+import DatabaseToEncrypt from "@/views/DatabaseToEncrypt.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -35,6 +37,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/databasenoencryption",
     name: "DatabaseNoEncryption",
     component: DatabaseNoEncryption,
+  },
+  {
+    path: "/databaseexecuteset",
+    name: "DatabaseExecuteSet",
+    component: DatabaseExecuteSet,
+  },
+  {
+    path: "/databasetoencrypt",
+    name: "DatabaseToEncrypt",
+    component: DatabaseToEncrypt,
   },
   {
     path: "/:catchAll(.*)",

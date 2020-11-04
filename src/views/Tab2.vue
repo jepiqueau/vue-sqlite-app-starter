@@ -11,16 +11,20 @@
           <ion-title size="large">Tab 2</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-button @click="() => router.push('/databasenoencryption')">DatabaseNoEncryption</ion-button>
+      <ion-button @click="() => router.push('/databasenoencryption')">Database NoEncryption</ion-button>
+      <ion-button @click="() => router.push('/databaseexecuteset')">Database ExecuteSet</ion-button>
+      <ion-button v-if="native" @click="() => router.push('/databasetoencrypt')">Database ToEncrypt</ion-button>
+
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-                                            IonButton } from '@ionic/vue';
+                                          IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   import { useRouter } from 'vue-router';
+  import { Capacitor } from '@capacitor/core';
 
   export default defineComponent({
     name: 'Tab2',
@@ -28,7 +32,11 @@
                   IonButton },
     setup() {
       const router = useRouter();
-      return { router };
+      const platform = Capacitor.getPlatform();
+      const native: boolean = platform === "ios" 
+                            || platform === "android" ? true : false;
+
+      return { router, native };
     }
   })
 </script>

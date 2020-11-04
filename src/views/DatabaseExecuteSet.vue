@@ -5,20 +5,20 @@
         <ion-buttons slot="start">
             <ion-back-button default-href="/tabs/tab2"></ion-back-button>
         </ion-buttons>
-        <ion-title>DB NoEncryption</ion-title>
+        <ion-title>DB ExecuteSet</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">DB NoEncryption</ion-title>
+          <ion-title size="large">DB ExecuteSet</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-card>
         <ion-card-content>
           <Suspense>
             <template #default>
-              <NoEncryptionTest />
+              <ExecuteSetTest />
             </template>
             <template #feedback>
               <div> Loading ... </div>
@@ -34,12 +34,12 @@ import { IonPage, IonButtons, IonHeader, IonToolbar, IonBackButton,
         IonTitle, IonContent, IonCard,
         IonCardContent } from '@ionic/vue';
 import { defineComponent } from 'vue';
-import NoEncryptionTest from '@/components/NoEncryptionTest.vue';
+import ExecuteSetTest from '@/components/ExecuteSetTest.vue';
 export default defineComponent({
-  name: 'DatabaseNoEncryption',
+  name: 'DatabaseExecuteSet',
   components: { IonPage, IonButtons, IonHeader, IonToolbar,
                 IonBackButton, IonTitle, IonContent, IonCard,
-                IonCardContent, NoEncryptionTest }
+                IonCardContent, ExecuteSetTest }
 });
 </script>
 <style>
