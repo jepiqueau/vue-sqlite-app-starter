@@ -11,9 +11,10 @@
           <ion-title size="large">Tab 2</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-button @click="() => router.push('/databasenoencryption')">Database NoEncryption</ion-button>
-      <ion-button @click="() => router.push('/databaseexecuteset')">Database ExecuteSet</ion-button>
-      <ion-button v-if="native" @click="() => router.push('/databasetoencrypt')">Database ToEncrypt</ion-button>
+      <ion-button @click="() => router.push('/databasenoencryption')">DB NoEncryption</ion-button>
+      <ion-button @click="() => router.push('/databaseexecuteset')">DB ExecuteSet</ion-button>
+      <ion-button v-if="native" @click="() => router.push('/databasetoencrypt')">DB ToEncrypt</ion-button>
+      <ion-button @click="() => router.push('/databasefromtojson')">DB FromToJson</ion-button>
 
     </ion-content>
   </ion-page>
