@@ -23,7 +23,7 @@
 
 <script lang="ts">
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-                                          IonButton } from '@ionic/vue';
+                               IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   import { useRouter } from 'vue-router';
   import { Capacitor } from '@capacitor/core';
@@ -35,9 +35,8 @@
     setup() {
       const router = useRouter();
       const platform = Capacitor.getPlatform();
-      const native: boolean = platform === "ios" 
-                            || platform === "android" ? true : false;
-
+      const native: boolean = (platform === "ios" 
+                            || platform === "android") ? true : false;
       return { router, native };
     }
   })

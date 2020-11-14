@@ -17,11 +17,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useSQLite } from 'vue-sqlite-hook/dist';
+import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
 import { schemaVersion1, dataVersion1, schemaVersion2,
         dataVersion2 } from '../utils/utils-update-version';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
+import { Capacitor } from '@capacitor/core';
 
 export default defineComponent({
     name: 'UpgradeVersionTest',
@@ -32,13 +33,25 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const { openDB, execute, query, isDBExists, deleteDB,
-                createSyncTable, addUpgradeStatement } = useSQLite();
+                createSyncTable, addUpgradeStatement, requestPermissions } = useSQLite();
+        const platform = Capacitor.getPlatform();
+
          /**
          * Check if database already exists and delete it
          */
         const testIsDBExists = async(): Promise<boolean> => {
             setLog(log.value
                         .concat("* Starting testIsDBExists *\n"));
+            if(platform === "android") {
+                const perm: any = await requestPermissions();
+                if(!perm.result) {
+                    setLog(log.value
+                            .concat(" Failed Permissions not granted\n"));
+                    return false;
+                }
+            }
+            setLog(log.value
+                    .concat(` isPermissions ${isPermissions.granted} \n`));
             // open the database
             const result: any = await isDBExists("test-updversion"); 
             if(result.result) {

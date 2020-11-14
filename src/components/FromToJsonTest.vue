@@ -17,11 +17,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useSQLite } from 'vue-sqlite-hook/dist';
+import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
 import { dataToImport, partialImport1, tableTwoImports,
          dataTwoImports } from '../utils/utils-import-from-json';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
+import { Capacitor } from '@capacitor/core';
 
 export default defineComponent({
     name: 'FromToJsonTest',
@@ -33,13 +34,25 @@ export default defineComponent({
         const [log, setLog] = useState("");
         const { openDB, close, deleteDB, isDBExists, importFromJson,
                 createSyncTable, exportToJson,
-                isJsonValid} = useSQLite();
+                isJsonValid, requestPermissions} = useSQLite();
+        const platform = Capacitor.getPlatform();
 
 
         // Import From Json Test
         const importJsonTest = async (): Promise<boolean>  => {
             setLog(log.value
                 .concat("* Starting testDatabaseFromJson *\n")); 
+            if(platform === "android") {
+                const perm: any = await requestPermissions();
+                if(!perm.result) {
+                    setLog(log.value
+                            .concat(" Failed Permissions not granted\n"));
+                    return false;
+                }
+            }
+            setLog(log.value
+                    .concat(` isPermissions ${isPermissions.granted} \n`));
+
             // Test if "db-from-json" exists and 
             // delete it for multiple test runs
             let result: any = await isDBExists("db-from-json"); 

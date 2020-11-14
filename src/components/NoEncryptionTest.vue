@@ -17,11 +17,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useSQLite } from 'vue-sqlite-hook/dist';
+import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
 import { createTablesNoEncryption, importTwoUsers, importThreeMessages,
   dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
+import { Capacitor } from '@capacitor/core';
 
 export default defineComponent({
     name: 'NoEncryptionTest',
@@ -31,10 +32,25 @@ export default defineComponent({
     async setup() {
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
-        const { openDB, close, execute, run, query} = useSQLite();
+        const { requestPermissions, openDB, close, execute, run, query } = useSQLite();
+        const platform = Capacitor.getPlatform();
+
         const noEncryptionTest = async (): Promise<boolean>  => {
+ 
+
             setLog(log.value
-                .concat("* Starting testDatabaseNoEncryption *\n")); 
+                .concat("* Starting testDatabaseNoEncryption *\n"));
+            if(platform === "android") {
+                const perm: any = await requestPermissions();
+                if(!perm.result) {
+                    setLog(log.value
+                            .concat(" Failed Permissions not granted\n"));
+                    return false;
+                }
+            }
+            setLog(log.value
+                    .concat(` isPermissions ${isPermissions.granted} \n`));
+
             // open the database
             let result: any = await openDB("test-sqlite"); 
             if(!result.result) {
@@ -135,7 +151,6 @@ export default defineComponent({
             return true;
         }
         onMounted(async () => {
-
             // Running the test
             const retNoEncryption: boolean = await noEncryptionTest();
             if(!retNoEncryption) {
