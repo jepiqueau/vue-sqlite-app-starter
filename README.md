@@ -6,13 +6,21 @@
 <p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2020?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
+
+## REFACTOR 🚀
+
+A refactor branch of this application has started using:
+
+- [@capacitor-community/sqlite@refactor](https://github.com/capacitor-community/sqlite/blob/refactor/README.md)
+- [vue-sqlite-hook@refactor](https://github.com/jepiqueau/vue-sqlite-hook/blob/refactor/README.md)
+
 
 ## Maintainers
 
