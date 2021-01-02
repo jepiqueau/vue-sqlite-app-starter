@@ -1,5 +1,4 @@
 export const createTablesNoEncryption =  `
-    BEGIN TRANSACTION;
     CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY NOT NULL,
     email TEXT UNIQUE NOT NULL,
@@ -32,22 +31,17 @@ export const createTablesNoEncryption =  `
         UPDATE messages SET last_modified= (strftime('%s', 'now')) WHERE id=OLD.id;   
     END;      
     PRAGMA user_version = 1;
-    COMMIT TRANSACTION;
 `;
 export const importTwoUsers = `
-    BEGIN TRANSACTION;
     DELETE FROM users;
     INSERT INTO users (name,email,age) VALUES ("Whiteley","Whiteley.com",30);
     INSERT INTO users (name,email,age) VALUES ("Jones","Jones.com",44);
-    COMMIT TRANSACTION;
 `;
 export const importThreeMessages = `
-    BEGIN TRANSACTION;
     DELETE FROM messages;
     INSERT INTO messages (userid,title,body) VALUES (1,"test post 1","content test post 1");
     INSERT INTO messages (userid,title,body) VALUES (2,"test post 2","content test post 2");
     INSERT INTO messages (userid,title,body) VALUES (1,"test post 3","content test post 3");
-    COMMIT TRANSACTION;
 `;
 export const dropTablesTablesNoEncryption = `
     PRAGMA foreign_keys = OFF;

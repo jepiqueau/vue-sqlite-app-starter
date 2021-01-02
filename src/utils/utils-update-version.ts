@@ -1,6 +1,5 @@
 // create tables
 export const schemaVersion1 = `
-BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY NOT NULL,
     email TEXT UNIQUE NOT NULL,
@@ -18,14 +17,11 @@ FOR EACH ROW WHEN NEW.last_modified <= OLD.last_modified
 BEGIN
     UPDATE users SET last_modified= (strftime('%s', 'now')) WHERE id=OLD.id;
 END;
-COMMIT TRANSACTION;
 `;
 export const dataVersion1 = `
-    BEGIN TRANSACTION;
     DELETE FROM users;
     INSERT INTO users (name,email,age) VALUES ("Whiteley","Whiteley.com",30);
     INSERT INTO users (name,email,age) VALUES ("Jones","Jones.com",44);
-    COMMIT TRANSACTION;
 `;
 
 export const schemaVersion2 = `

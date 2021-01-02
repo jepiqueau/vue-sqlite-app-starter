@@ -16,14 +16,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
-import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
+import { defineComponent, onMounted, getCurrentInstance } from 'vue';
 import { createTablesNoEncryption, importTwoUsers, importThreeMessages,
   dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { Capacitor } from '@capacitor/core';
-
+import { SQLiteDBConnection, Result, isPermissions } from 'vue-sqlite-hook/dist';
+import { deleteDatabase } from '@/utils/utils-delete-db';
 export default defineComponent({
     name: 'NoEncryptionTest',
     components: {
@@ -32,120 +31,93 @@ export default defineComponent({
     async setup() {
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
-        const { requestPermissions, openDB, close, execute, run, query } = useSQLite();
-        const platform = Capacitor.getPlatform();
+        const app = getCurrentInstance()
+        const sqlite = app?.appContext.config.globalProperties.$sqlite;
 
         const noEncryptionTest = async (): Promise<boolean>  => {
  
-
             setLog(log.value
                 .concat("* Starting testDatabaseNoEncryption *\n"));
-            if(platform === "android") {
-                const perm: any = await requestPermissions();
-                if(!perm.result) {
-                    setLog(log.value
-                            .concat(" Failed Permissions not granted\n"));
-                    return false;
-                }
-            }
             setLog(log.value
                     .concat(` isPermissions ${isPermissions.granted} \n`));
 
-            // open the database
-            let result: any = await openDB("test-sqlite"); 
-            if(!result.result) {
-                setLog(log.value
-                        .concat(" Failed to open the database\n"));
-                return false;
-            }
+            // test the plugin with echo
+            let res: any = await sqlite.echo("Hello from echo");
+            if(res.value !== "Hello from echo") return false;
+            setLog(log.value.concat("> Echo successful\n"));
+            // create a connection for NoEncryption
+            res = await sqlite.createConnection("NoEncryption");
+            if(res == null ) return false;
+            if((Object.keys(res)).includes("result") && !res.result) return false;
+            setLog(log.value.concat("> createConnection " +
+                                        " 'NoEncryption' successful\n"));
+            let db: SQLiteDBConnection = res; 
+            // check if the databases exist 
+            // and delete it for multiple successive tests
+            res = await deleteDatabase(db);         
+            // open NoEncryption database
+            res = await db.open();
+            if(!res.result) return false;
+            setLog(log.value.concat("> open 'NoEncryption' successful\n"));
             // Drop tables if exists
-            result = await execute(dropTablesTablesNoEncryption);
-            if(result.changes.changes !== 0 &&
-                                    result.changes.changes !== 1) {
-                setLog(log.value.concat(" Execute1 failed\n"));
-                return false;
-            }
+            res = await db.execute(dropTablesTablesNoEncryption);
+            if(res.changes.changes !== 0 &&
+                         res.changes.changes !== 1) return false;
+            setLog(log.value.concat(" Execute1 successful\n"));
+            
             // Create tables
-            result = await execute(createTablesNoEncryption);
-            if(result.changes.changes !== 0 &&
-                                    result.changes.changes !== 1) {
-                setLog(log.value.concat(" Execute2 failed\n"));
-                return false;
-            }
+            res = await db.execute(createTablesNoEncryption);
+            if(res.changes.changes !== 0 &&
+                res.changes.changes !== 1) return false;
+            setLog(log.value.concat(" Execute2 successful\n"));
+
             // Insert two users with execute method
-            result = await execute(importTwoUsers);
-            if(result.changes.changes !== 2) {
-                setLog(log.value.concat(" Execute3 failed\n"));
-                return false;
-            }
+            res = await db.execute(importTwoUsers);
+            if(res.changes.changes !== 2) return false;
+            setLog(log.value.concat(" Execute3 successful\n"));
+
             // Select all Users
-            result = await query("SELECT * FROM users");
-            if(result.values.length !== 2 ||
-            result.values[0].name !== "Whiteley"
-                        || result.values[1].name !== "Jones") {
-                setLog(log.value.concat(" Select1 failed\n"));
-                return false;
-            }
+            res = await db.query("SELECT * FROM users");
+            if(res.values.length !== 2 ||
+            res.values[0].name !== "Whiteley" ||
+                        res.values[1].name !== "Jones") return false;
+            setLog(log.value.concat(" Select1 successful\n"));
+
             // add one user with statement and values              
-            let sqlcmd = "INSERT INTO users (name,email,age) ";
-            sqlcmd += "VALUES (?,?,?)";
-            const values: any[]  = ["Simpson","Simpson@example.com",
-                                    69];
-            result = await run(sqlcmd,values);
-            if(result.changes.changes !== 1
-                                || result.changes.lastId !== 3) {
-                setLog(log.value.concat(" Run1 failed\n"));
-                return false;
-            }
+            let sqlcmd = "INSERT INTO users (name,email,age) VALUES (?,?,?)";
+            let values: Array<any>  = ["Simpson","Simpson@example.com",69];
+            res = await db.run(sqlcmd,values);
+            if(res.changes.changes !== 1 ||
+                            res.changes.lastId !== 3) return false;
+            setLog(log.value.concat(" Run1 successful\n"));
+
             // add one user with statement              
-            sqlcmd = `INSERT INTO users (name,email,age) VALUES `;
-            sqlcmd += `("Brown","Brown@example.com",15)`;
-            result = await run(sqlcmd);
-            if(result.changes.changes !== 1
-                            || result.changes.lastId !== 4) {
-                setLog(log.value.concat(" Run2 failed\n"));
-                return false;
-            }
+            sqlcmd = `INSERT INTO users (name,email,age) VALUES `+
+                            `("Brown","Brown@example.com",15)`;
+            res = await db.run(sqlcmd);
+            if(res.changes.changes !== 1 ||
+                        res.changes.lastId !== 4) return false;
+            setLog(log.value.concat(" Run2 successful\n"));
+
             // Select all Users
-            result = await query("SELECT * FROM users");
-            if(result.values.length !== 4) {
-                setLog(log.value.concat(" Select2 failed\n"));
-                return false;
-            }
+            res = await db.query("SELECT * FROM users");
+            if(res.values.length !== 4) return false;
+            setLog(log.value.concat(" Select2 successful\n"));
+
             // Select Users with age > 35
-            sqlcmd = "SELECT name,email,age FROM users WHERE ";
-            sqlcmd += "age > ?";
-            const age: string[] = ["35"];
-            result = await query(sqlcmd,age);
-            if(result.values.length !== 2) {
-                setLog(log.value
-                    .concat(" Select with filter on age failed\n"));
-                return false;
+            sqlcmd = "SELECT name,email,age FROM users WHERE age > ?";
+            values = ["35"];
+            res = await db.query(sqlcmd,values);
+            if(res.values.length !== 2) return false;
+            setLog(log.value
+                    .concat(" Select with filter on age successful\n"));
+
+            // Close Connection NoEncryption        
+            res = await sqlite.closeConnection("NoEncryption"); 
+            if(!res.result) {
+                return false; 
             }
-            // Import three messages
-            result = await execute(importThreeMessages);
-            if(result.changes.changes !== 3) {
-                setLog(log.value
-                            .concat(" Insert messages failed\n"));
-                return false;
-            }
-            // Select all Messages
-            result = await query("SELECT * FROM messages");
-            if(result.values.length !== 3 ||
-                result.values[0].title !== "test post 1" 
-                    || result.values[1].title !== "test post 2" 
-                    || result.values[2].title !== "test post 3") {
-                setLog(log.value
-                            .concat(" Select messages failed\n"));
-                return false;    
-            }
-            // Close the Database
-            result = await close("test-sqlite")
-            if(!result.result) {
-                setLog(log.value
-                        .concat(" Failed to close the database\n"));
-                return false;    
-            }       
+                    
             setLog(log.value
                 .concat("* Ending testDatabaseNoEncryption *\n"));
             return true;

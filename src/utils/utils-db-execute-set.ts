@@ -1,5 +1,4 @@
 export const createTablesExecuteSet =  `
-    BEGIN TRANSACTION;
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY NOT NULL,
         email TEXT UNIQUE NOT NULL,
@@ -24,7 +23,6 @@ export const createTablesExecuteSet =  `
     DELETE FROM messages;
     PRAGMA user_version = 1;
     PRAGMA foreign_keys = ON;
-    COMMIT TRANSACTION;
 `;
 export const dropTablesTablesExecuteSet = `
     PRAGMA foreign_keys = OFF;

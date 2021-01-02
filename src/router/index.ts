@@ -41,6 +41,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "DatabaseNoEncryption",
     component: DatabaseNoEncryption,
   },
+  /*
   {
     path: "/databaseexecuteset",
     name: "DatabaseExecuteSet",
@@ -66,6 +67,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "DatabaseUpgradeVersion",
     component: DatabaseUpgradeVersion,
   },
+  */
   {
     path: "/:catchAll(.*)",
     component: NotFound,

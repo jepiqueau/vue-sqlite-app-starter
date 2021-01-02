@@ -22,11 +22,30 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { useSQLite } from 'vue-sqlite-hook/dist';
+
+const {echo, getPlatform, createConnection, closeConnection,
+  retrieveConnection, retrieveAllConnections, closeAllConnections,
+  addUpgradeStatement, importFromJson, isJsonValid, requestPermissions, 
+  isAvailable} = useSQLite();
+
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
   
+app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
+  createConnection: createConnection,
+  closeConnection: closeConnection,
+  retrieveConnection: retrieveConnection,
+  retrieveAllConnections: retrieveAllConnections,
+  closeAllConnections: closeAllConnections,
+  addUpgradeStatement: addUpgradeStatement,
+  importFromJson: importFromJson,
+  isJsonValid: isJsonValid,
+  requestPermissions: requestPermissions,
+  isAvailable:isAvailable};
+
 router.isReady().then(() => {
   app.mount('#app');
 });

@@ -11,12 +11,7 @@
           <ion-title size="large">Tab 2</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-button @click="() => router.push('/databasenoencryption')">DB NoEncryption</ion-button>
-      <ion-button @click="() => router.push('/databaseexecuteset')">DB ExecuteSet</ion-button>
-      <ion-button v-if="native" @click="() => router.push('/databasetoencrypt')">DB ToEncrypt</ion-button>
-      <ion-button v-if="native" @click="() => router.push('/databaseencrypted')">DB Encrypted</ion-button>
-      <ion-button @click="() => router.push('/databasefromtojson')">DB FromToJson</ion-button>
-      <ion-button @click="() => router.push('/databaseupgradeversion')">DB UpgradeVersion</ion-button>
+      <ion-button v-if="isGranted" @click="() => router.push('/databasenoencryption')">DB NoEncryption</ion-button>
     </ion-content>
   </ion-page>
 </template>
@@ -24,9 +19,17 @@
 <script lang="ts">
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
                                IonButton } from '@ionic/vue';
-  import { defineComponent } from 'vue';
+  import { defineComponent, onMounted, ref } from 'vue';
   import { useRouter } from 'vue-router';
-  import { Capacitor } from '@capacitor/core';
+  import { usePermissions } from '@/composables/usePermissions'
+  /*
+      <ion-button @click="() => router.push('/databaseexecuteset')">DB ExecuteSet</ion-button>
+      <ion-button v-if="native" @click="() => router.push('/databasetoencrypt')">DB ToEncrypt</ion-button>
+      <ion-button v-if="native" @click="() => router.push('/databaseencrypted')">DB Encrypted</ion-button>
+      <ion-button @click="() => router.push('/databasefromtojson')">DB FromToJson</ion-button>
+      <ion-button @click="() => router.push('/databaseupgradeversion')">DB UpgradeVersion</ion-button>
+
+  */
 
   export default defineComponent({
     name: 'Tab2',
@@ -34,10 +37,12 @@
                   IonButton },
     setup() {
       const router = useRouter();
-      const platform = Capacitor.getPlatform();
-      const native: boolean = (platform === "ios" 
-                            || platform === "android") ? true : false;
-      return { router, native };
+      const isGranted = ref(true);
+      onMounted(async () => {
+        isGranted.value = await usePermissions();
+      });
+      return { router, isGranted };
     }
   })
 </script>
+
