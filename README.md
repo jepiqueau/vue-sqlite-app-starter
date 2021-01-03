@@ -1,14 +1,15 @@
 <p align="center"><br><img src="https://avatars3.githubusercontent.com/u/16580653?v=4" width="128" height="128" /></p>
 
 <h3 align="center">Ionic/Vue SQLite App Starter</h3>
-<p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p>
+<p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p><br>
+<p align="center" style="font-size:50px;color:red"><strong>REFACTOR</strong></p><br>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
 <p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
 <br>
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
-  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
+  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/refactor?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -16,7 +17,7 @@
 
 ## REFACTOR 🚀
 
-A refactor branch of this application has started using:
+The refactor branch of the application uses the refactor version of the plugin and hook:
 
 - [@capacitor-community/sqlite@refactor](https://github.com/capacitor-community/sqlite/blob/refactor/README.md)
 - [vue-sqlite-hook@refactor](https://github.com/jepiqueau/vue-sqlite-hook/blob/refactor/README.md)
@@ -34,7 +35,7 @@ A refactor branch of this application has started using:
 To start clone the project
 
 ```bash
-git clone https://github.com/jepiqueau/vue-sqlite-app-starter.git
+git clone --branch refactor https://github.com/jepiqueau/vue-sqlite-app-starter.git
 cd ./vue-sqlite-app-starter
 git remote remove origin
 npm install
@@ -46,7 +47,8 @@ cd ..
 To install the latest release of the ```@capacitor-community/sqlite``` plugin
 
 ```bash
-npm run update
+npm i --save-dev @capacitor-community/sqlite@refactor
+npm i --save-dev vue-sqlite-hook@refactor
 npm run build 
 npx cap sync
 npx cap sync @capacitor-community/electron
@@ -82,9 +84,10 @@ npx cap open android
 npx cap open @capacitor-community/eletron
 ```
 
-## Accessing the tests
+## Usage
 
-Go to the Tab2 of the application
+The @capacitor-community/sqlite tests are accessible in the Tab2 of the Application by clicking on several SQLite test buttons :
+
 
 
 ## Contributors ✨

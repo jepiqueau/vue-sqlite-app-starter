@@ -1,3 +1,4 @@
+import { capSQLiteSet } from '@capacitor-community/sqlite';
 export const createTablesNoEncryption =  `
     CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY NOT NULL,
@@ -49,4 +50,14 @@ export const dropTablesTablesNoEncryption = `
     DROP TABLE IF EXISTS messages;
     PRAGMA foreign_keys = ON;
 `;
-
+export const setUsers: Array<capSQLiteSet>  = [
+    { statement:"INSERT INTO users (name,email,age) VALUES (?,?,?);",
+      values:["Jackson","Jackson@example.com",18]
+    },
+    { statement:"INSERT INTO users (name,email,age) VALUES (?,?,?);",
+      values:["Kennedy","Kennedy@example.com",25]
+    },
+    { statement:"INSERT INTO users (name,email,age) VALUES (?,?,?);",
+      values:["Bush","Bush@example.com",42]
+    },
+  ];

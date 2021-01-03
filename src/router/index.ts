@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import Tabs from '../views/Tabs.vue'
+import Tabs from '../views/Tabs.vue';
 import DatabaseNoEncryption from "@/views/DatabaseNoEncryption.vue";
+import DatabaseTwoDbs from "@/views/DatabaseTwoDbs.vue";
+import DatabaseExistingConn from "@/views/DatabaseExistingConn.vue";
 import DatabaseExecuteSet from "@/views/DatabaseExecuteSet.vue";
 import DatabaseToEncrypt from "@/views/DatabaseToEncrypt.vue";
 import DatabaseFromToJson from "@/views/DatabaseFromToJson.vue";
@@ -41,6 +43,17 @@ const routes: Array<RouteRecordRaw> = [
     name: "DatabaseNoEncryption",
     component: DatabaseNoEncryption,
   },
+  {
+    path: "/databasetwodbs",
+    name: "DatabaseTwoDbs",
+    component: DatabaseTwoDbs,
+  },
+  {
+    path: "/databaseexistingconnection",
+    name: "DatabaseExistingConn",
+    component: DatabaseExistingConn,
+  },
+  
   /*
   {
     path: "/databaseexecuteset",
