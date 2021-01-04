@@ -25,17 +25,19 @@ import './theme/variables.css';
 import { useSQLite } from 'vue-sqlite-hook/dist';
 import { useState } from '@/composables/state';
 
+// SQLite Hook  
 const {echo, getPlatform, createConnection, closeConnection,
   retrieveConnection, retrieveAllConnections, closeAllConnections,
   addUpgradeStatement, importFromJson, isJsonValid, requestPermissions, 
-  isAvailable} = useSQLite();
-
+  copyFromAssets, isAvailable} = useSQLite();
+//Existing Connections
 const [existConn, setExistConn] = useState(false);
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
-  
+
+// Singleton SQLite Hook  
 app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
   createConnection: createConnection,
   closeConnection: closeConnection,
@@ -46,8 +48,10 @@ app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
   importFromJson: importFromJson,
   isJsonValid: isJsonValid,
   requestPermissions: requestPermissions,
+  copyFromAssets: copyFromAssets,
   isAvailable:isAvailable};
 
+//  Existing Connections Store
 app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
   
 router.isReady().then(() => {

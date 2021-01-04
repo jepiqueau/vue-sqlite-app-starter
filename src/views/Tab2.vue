@@ -21,6 +21,9 @@
           <IonItem v-if="isGranted && existingConn.existConn.value">
             <ion-button @click="() => router.push('/databaseexistingconnection')">SQLite Existing Connection</ion-button>
           </IonItem>
+          <IonItem v-if="isGranted">
+            <ion-button @click="() => router.push('/databasecopyfromassets')">SQLite CopyFromAssets</ion-button>
+          </IonItem> 
         </IonList>
     </ion-content>
   </ion-page>

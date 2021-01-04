@@ -17,11 +17,10 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, getCurrentInstance } from 'vue';
-import { createTablesNoEncryption, importTwoUsers, importThreeMessages,
-  dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
+import { createTablesNoEncryption, importTwoUsers } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection, Result, isPermissions } from 'vue-sqlite-hook/dist';
+import { isPermissions } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 import { createSchemaContacts, setContacts } from '@/utils/utils-db-encrypted-set';
 

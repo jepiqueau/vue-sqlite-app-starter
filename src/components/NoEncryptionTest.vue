@@ -17,11 +17,11 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, getCurrentInstance } from 'vue';
-import { createTablesNoEncryption, importTwoUsers, importThreeMessages,
+import { createTablesNoEncryption, importTwoUsers,
   dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection, Result, isPermissions } from 'vue-sqlite-hook/dist';
+import { SQLiteDBConnection, isPermissions } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 export default defineComponent({
     name: 'NoEncryptionTest',
