@@ -2,7 +2,7 @@
 
 <h3 align="center">Ionic/Vue SQLite App Starter</h3>
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p><br>
-<p align="center" style="font-size:50px;color:red"><strong>REFACTOR</strong></p><br>
+<p align="center" style="font-size:50px;color:red"><strong>REFACTOR 🚀</strong></p><br>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
 <p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
 <br>
