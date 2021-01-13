@@ -7,7 +7,7 @@
   "homepage": "./",
   "private": true,
   "scripts": {
-    "update": "npm install --save @capacitor-community/sqlite@latest --save-dev vue-sqlite-hook@latest",
+    "update": "npm install --save-dev @capacitor-community/sqlite@latest --save-dev vue-sqlite-hook@latest",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
