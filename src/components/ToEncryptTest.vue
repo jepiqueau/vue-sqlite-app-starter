@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
+import { useSQLite } from 'vue-sqlite-hook/dist';
 import { createTablesNoEncryption, importTwoUsers,
          importThreeMessages } from '../utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
@@ -33,23 +33,12 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const { openDB, close, execute, run, query, isDBExists,
-                deleteDB, requestPermissions} = useSQLite();
-        const platform = Capacitor.getPlatform();
+                deleteDB} = useSQLite();
 
         // To Encrypt Test
         const toEncryptTest = async (): Promise<boolean>  => {
             setLog(log.value
                 .concat("* Starting testDatabaseToEncrypt *\n")); 
-            if(platform === "android") {
-                const perm: any = await requestPermissions();
-                if(!perm.result) {
-                    setLog(log.value
-                            .concat(" Failed Permissions not granted\n"));
-                    return false;
-                }
-            }
-            setLog(log.value
-                    .concat(` isPermissions ${isPermissions.granted} \n`));
 
             // Test if "test-encryption" exists and delete it 
             // for multiple test runs

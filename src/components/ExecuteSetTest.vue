@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { useSQLite, isPermissions } from 'vue-sqlite-hook/dist';
+import { useSQLite } from 'vue-sqlite-hook/dist';
 import { createTablesExecuteSet, dropTablesTablesExecuteSet,
          setArrayUsers, setArrayMessages }
                                 from '../utils/utils-db-execute-set';
@@ -34,25 +34,13 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const { openDB, close, execute,  executeSet, run,
-                        query, requestPermissions} = useSQLite();
-        const platform = Capacitor.getPlatform();
+                        query} = useSQLite();
 
 
         // Execute Set Test
         const executeSetTest = async (): Promise<boolean>  => {
             setLog(log.value
                 .concat("* Starting testDatabaseExecuteSet *\n")); 
-            if(platform === "android") {
-                const perm: any = await requestPermissions();
-                if(!perm.result) {
-                    setLog(log.value
-                            .concat(" Failed Permissions not granted\n"));
-                    return false;
-                }
-            }
-            setLog(log.value
-                    .concat(` isPermissions ${isPermissions.granted} \n`));
-
             // open the database
             let result: any = await openDB("test-executeset"); 
             if(!result.result) {
