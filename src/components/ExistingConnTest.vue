@@ -21,7 +21,6 @@ import { setUsers } from '@/utils/utils-db-no-encryption';
 import { createSchemaMessages, setMessages } from '@/utils/utils-db-encrypted-set';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { isPermissions } from 'vue-sqlite-hook/dist';
 export default defineComponent({
     name: 'ExistingConnTest',
     components: {
@@ -36,8 +35,6 @@ export default defineComponent({
  
             setLog(log.value
                 .concat("* Starting testDatabaseExistingConn *\n"));
-            setLog(log.value
-                    .concat(` isPermissions ${isPermissions.granted} \n`));
             // test the plugin with echo
             let res: any = await sqlite.echo("Hello from echo");
             if(res.value !== "Hello from echo") return false;

@@ -20,7 +20,6 @@ import { defineComponent, onMounted, getCurrentInstance } from 'vue';
 import { createTablesNoEncryption, importTwoUsers } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { isPermissions } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 import { createSchemaContacts, setContacts } from '@/utils/utils-db-encrypted-set';
 
@@ -38,8 +37,6 @@ export default defineComponent({
  
             setLog(log.value
                 .concat("* Starting testDatabaseTwoDbs *\n"));
-            setLog(log.value
-                    .concat(` isPermissions ${isPermissions.granted} \n`));
 
             // initialize the connection
             const db = await sqlite

@@ -21,7 +21,7 @@ import { createTablesNoEncryption, importTwoUsers,
   dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection, isPermissions } from 'vue-sqlite-hook/dist';
+import { SQLiteDBConnection } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 export default defineComponent({
     name: 'NoEncryptionTest',
@@ -37,8 +37,6 @@ export default defineComponent({
  
             setLog(log.value
                 .concat("* Starting testDatabaseNoEncryption *\n"));
-            setLog(log.value
-                    .concat(` isPermissions ${isPermissions.granted} \n`));
             // test the plugin with echo
             let res: any = await sqlite.echo("Hello from echo");
             if(res.value !== "Hello from echo") return false;

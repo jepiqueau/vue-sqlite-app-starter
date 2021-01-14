@@ -28,7 +28,7 @@ import { useState } from '@/composables/state';
 // SQLite Hook  
 const {echo, getPlatform, createConnection, closeConnection,
   retrieveConnection, retrieveAllConnections, closeAllConnections,
-  addUpgradeStatement, importFromJson, isJsonValid, requestPermissions, 
+  addUpgradeStatement, importFromJson, isJsonValid, 
   copyFromAssets, isAvailable} = useSQLite();
 //Existing Connections
 const [existConn, setExistConn] = useState(false);
@@ -47,7 +47,6 @@ app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
   addUpgradeStatement: addUpgradeStatement,
   importFromJson: importFromJson,
   isJsonValid: isJsonValid,
-  requestPermissions: requestPermissions,
   copyFromAssets: copyFromAssets,
   isAvailable:isAvailable};
 
