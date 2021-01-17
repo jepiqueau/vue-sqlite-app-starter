@@ -17,8 +17,9 @@ export const dataToImport: any = {
                 {column:"last_modified", value:"INTEGER"}
             ],
             indexes: [
-                {name: "index_user_on_name",column: "name"},
-                {name: "index_user_on_last_modified",column: "last_modified"}
+                {name: "index_user_on_name",value: "name"},
+                {name: "index_user_on_last_modified",value: "last_modified DESC"},
+                {name: "index_user_on_email_name", value: "email ASC, name", mode: "UNIQUE"}
             ],
             values: [
                 [1,"Whiteley.com","Whiteley",30,1582536810],
@@ -76,8 +77,8 @@ export const partialImport1: any = {
         {
           name: "messages",
           indexes: [
-            {name: "index_messages_on_title",column: "title"},
-            {name: "index_messages_on_last_modified",column: "last_modified"}
+            {name: "index_messages_on_title",value: "title"},
+            {name: "index_messages_on_last_modified",value: "last_modified DESC"}
 
           ],
           values: [
