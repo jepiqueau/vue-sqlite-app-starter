@@ -24,6 +24,9 @@
           <IonItem>
             <ion-button @click="() => router.push('/databasecopyfromassets')">SQLite CopyFromAssets</ion-button>
           </IonItem> 
+          <IonItem>
+            <ion-button @click="() => router.push('/databasejsonimportexport')">SQLite JsonImportExport</ion-button>
+          </IonItem> 
         </IonList>
     </ion-content>
   </ion-page>

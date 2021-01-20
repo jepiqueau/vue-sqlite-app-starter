@@ -1,6 +1,6 @@
 {
   "name": "vue-sqlite-app-starter",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Ionic/Vue SQLite Application Starter",
   "author": "Jean Pierre Quéau",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "vue-router": "^4.0.1"
   },
   "devDependencies": {
-    "@capacitor-community/sqlite": "^2.9.4",
+    "@capacitor-community/sqlite": "^2.9.5",
     "@capacitor/cli": "2.4.6",
     "@types/jest": "^26.0.19",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
