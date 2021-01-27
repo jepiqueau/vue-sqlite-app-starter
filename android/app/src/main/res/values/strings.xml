@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">vue-sqlite-app-starter</string>
-    <string name="title_activity_main">vue-sqlite-app-starter</string>
-    <string name="package_name">com.jeep.app.vue.hook.sqlite</string>
-    <string name="custom_url_scheme">com.jeep.app.vue.hook.sqlite</string>
-</resources>

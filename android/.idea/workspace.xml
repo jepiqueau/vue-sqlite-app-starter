@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82802874-ad5a-4f83-9850-1961def66834" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.6.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/5.6.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/capacitor.build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jeep/app/vue/hook/sqlite/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-hdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-mdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-hdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-mdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/variables.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/plugins/plugin.js-8eb1d1a5821df790ac85ceac15f491c9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/preloader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/Splash.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/App/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/App/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_XL_API_29]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1nefjQmS9ZT9JPEFYeUBiv1NBVg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_29" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-27T13:55:25.162Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="android.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82802874-ad5a-4f83-9850-1961def66834" name="Default Changelist" comment="" />
+      <created>1611755612881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611755612881</updated>
+    </task>
+    <servers />
+  </component>
+</project>

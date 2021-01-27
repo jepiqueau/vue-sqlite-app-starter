@@ -3,12 +3,13 @@
 <h3 align="center">Ionic/Vue SQLite App Starter</h3>
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
-<p align="center"><strong><code>@capacitor-community/sqlite@initial plugin<code></strong></p>
+<p align="center"><strong><code>@capacitor-community/sqlite@next plugin<code></strong></p>
+<p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 3 🚧</strong></p><br>
 <br>
 <p align="center">
   <img src="https://img.shields.io/maintenance/no/2021?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
-  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/2.4.x?style=flat-square" /></a>
+  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/main?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -22,21 +23,16 @@
 | Quéau Jean Pierre | [jepiqueau](https://github.com/jepiqueau) |        |
 
 
-## Maintenance 🛑 
 
-
-## Installation
+## Installation 🚧
 
 To start clone the project
 
 ```bash
-git clone --branch 2.4.x https://github.com/jepiqueau/vue-sqlite-app-starter.git
+git clone https://github.com/jepiqueau/vue-sqlite-app-starter.git
 cd ./vue-sqlite-app-starter
 git remote remove origin
 npm install
-cd electron
-npm install
-cd ..
 ```
 
 To install the latest release of the ```@capacitor-community/sqlite``` plugin
@@ -45,11 +41,9 @@ To install the latest release of the ```@capacitor-community/sqlite``` plugin
 npm run update
 npm run build 
 npx cap sync
-npx cap sync @capacitor-community/electron
 npm run build
 npx cap copy
 npx cap copy web
-npx cap copy @capacitor-community/electron
 ```
 
 ## Running the app
@@ -72,13 +66,8 @@ npx cap open ios
 npx cap open android
 ```
 
-### ELECTRON
 
-```
-npx cap open @capacitor-community/electron
-```
-
-## Accessing the tests
+## Accessing the tests 🚧
 
 Go to the Tab2 of the application
 
