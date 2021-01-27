@@ -24,6 +24,9 @@
 
 ## Maintenance 🛑 
 
+The maintenance has been stopped. You must upgrade to 'latest' version of the `@capacitor-community/sqlite`
+
+[vue-sqlite-app-starter](https://github.com/jepiqueau/vue-sqlite-app-starter/tree/refactor)
 
 ## Installation
 
