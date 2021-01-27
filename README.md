@@ -3,23 +3,16 @@
 <h3 align="center">Ionic/Vue SQLite App Starter</h3>
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
-<p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
+<p align="center"><strong><code>@capacitor-community/sqlite@initial plugin<code></strong></p>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/no/2021?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
-  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
+  <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/2.4.x?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
-
-## REFACTOR 🚀
-
-A refactor branch of this application has started using:
-
-- [@capacitor-community/sqlite@refactor](https://github.com/capacitor-community/sqlite/blob/refactor/README.md)
-- [vue-sqlite-hook@refactor](https://github.com/jepiqueau/vue-sqlite-hook/blob/refactor/README.md)
 
 
 ## Maintainers
@@ -29,12 +22,15 @@ A refactor branch of this application has started using:
 | Quéau Jean Pierre | [jepiqueau](https://github.com/jepiqueau) |        |
 
 
+## Maintenance 🛑 
+
+
 ## Installation
 
 To start clone the project
 
 ```bash
-git clone https://github.com/jepiqueau/vue-sqlite-app-starter.git
+git clone --branch 2.4.x https://github.com/jepiqueau/vue-sqlite-app-starter.git
 cd ./vue-sqlite-app-starter
 git remote remove origin
 npm install
@@ -79,7 +75,7 @@ npx cap open android
 ### ELECTRON
 
 ```
-npx cap open @capacitor-community/eletron
+npx cap open @capacitor-community/electron
 ```
 
 ## Accessing the tests
