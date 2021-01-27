@@ -4,7 +4,7 @@
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p><br>
 <p align="center" style="font-size:50px;color:red"><strong>REFACTOR 🚀</strong></p><br>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
-<p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
+<p align="center"><strong><code>@capacitor-community/sqlite@latest plugin<code></strong></p>
 <br>
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
@@ -15,19 +15,21 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
-## REFACTOR 🚀
-
-The refactor branch of the application uses the refactor version of the plugin and hook:
-
-- [@capacitor-community/sqlite@refactor](https://github.com/capacitor-community/sqlite/blob/refactor/README.md)
-- [vue-sqlite-hook@refactor](https://github.com/jepiqueau/vue-sqlite-hook/blob/refactor/README.md)
-
 
 ## Maintainers
 
 | Maintainer        | GitHub                                    | Social |
 | ----------------- | ----------------------------------------- | ------ |
 | Quéau Jean Pierre | [jepiqueau](https://github.com/jepiqueau) |        |
+
+
+## Browser Support
+
+The plugin follows the guidelines from the `Capacitor Team`,
+
+- [Capacitor Browser Support](https://capacitorjs.com/docs/v3/web#browser-support)
+
+meaning that it will not work in IE11 without additional JavaScript transformations, e.g. with [Babel](https://babeljs.io/).
 
 
 ## Installation
@@ -47,8 +49,8 @@ cd ..
 To install the latest release of the ```@capacitor-community/sqlite``` plugin
 
 ```bash
-npm i --save-dev @capacitor-community/sqlite@refactor
-npm i --save-dev vue-sqlite-hook@refactor
+npm i --save-dev @capacitor-community/sqlite@latest
+npm i --save-dev vue-sqlite-hook@latest
 npm run build 
 npx cap sync
 npx cap sync @capacitor-community/electron
@@ -81,13 +83,27 @@ npx cap open android
 ### ELECTRON
 
 ```
-npx cap open @capacitor-community/eletron
+npx cap open @capacitor-community/electron
 ```
 
 ## Usage
 
 The @capacitor-community/sqlite tests are accessible in the Tab2 of the Application by clicking on several SQLite test buttons :
 
+- SQLite No Encryption Test
+- SQLite Two DBs Tests
+- SQLite CopyFomAssets
+- SQLite JsonImportExport
+
+After having run the `SQLite Two DBs Tests` another test becomes accessible `SQLite Existing Connection` which is using the existing connections created in SQLite Two DBs Tests.
+
+## Documentation
+
+[@capacitor-community/sqlite@latest](https://github.com/capacitor-community/sqlite/tree/2.9.x)
+
+[vue-sqlite-hook](https://github.com/jepiqueau/vue-sqlite-hook/tree/2.9.x)
+
+[Ionic-Vue-Usage](https://github.com/capacitor-community/sqlite/blob/2.9.x/docs/Ionic-Vue-Usage.md)
 
 
 ## Contributors ✨
