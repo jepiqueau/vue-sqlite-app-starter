@@ -7,7 +7,7 @@
 <p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 3 🚧</strong></p><br>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/no/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/main?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -23,6 +23,9 @@
 | Quéau Jean Pierre | [jepiqueau](https://github.com/jepiqueau) |        |
 
 
+## 🚧 To be Updated 🚧
+
+The components `CopyFromAssetsTest.vue`, `ExistingConnTest.vue` and `JsonImportExportTest.vue`have still to be updated
 
 ## Installation 🚧
 

@@ -1,0 +1,13 @@
+{
+	"appId": "com.jeep.app.vue.hook.sqlite",
+	"appName": "vue-sqlite-app-starter",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "dist",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {}
+}
