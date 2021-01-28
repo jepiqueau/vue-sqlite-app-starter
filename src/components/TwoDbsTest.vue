@@ -9,7 +9,7 @@
         </div>
         <div v-else id="log">
             <pre>
-            <p>{{log}}</p>
+                <p>{{log}}</p>
             </pre>
             <div v-if="errMess.length > 0">
                 <p>{{errMess}}</p>}
