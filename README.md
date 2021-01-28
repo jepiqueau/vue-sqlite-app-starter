@@ -25,7 +25,7 @@
 
 ## 🚧 To be Updated 🚧
 
-The components `CopyFromAssetsTest.vue`, `ExistingConnTest.vue` and `JsonImportExportTest.vue`have still to be updated
+The components `EncryptionTest.vue` and `UpgradeVersionTest.vue`have still to be created
 
 ## Installation 🚧
 
