@@ -92,6 +92,7 @@ export default defineComponent({
             setLog(log.value.concat(" Run2 successful\n"));
             // Select all Users
             res = await db.query("SELECT * FROM users");
+            console.log(`**** all users ${JSON.stringify(res.values)} `)
             if(res.values.length !== 4) return false;
             setLog(log.value.concat(" Select2 successful\n"));
             // Select Users with age > 35

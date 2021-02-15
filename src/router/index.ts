@@ -6,6 +6,7 @@ import DatabaseTwoDbs from "@/views/DatabaseTwoDbs.vue";
 import DatabaseExistingConn from "@/views/DatabaseExistingConn.vue";
 import DatabaseCopyFromAssets from "@/views/DatabaseCopyFromAssets.vue";
 import DatabaseJsonImportExport from "@/views/DatabaseJsonImportExport.vue";
+import DatabaseAnimalsTest from "@/views/DatabaseAnimalsTest.vue";
 import DatabaseExecuteSet from "@/views/DatabaseExecuteSet.vue";
 import DatabaseToEncrypt from "@/views/DatabaseToEncrypt.vue";
 import DatabaseFromToJson from "@/views/DatabaseFromToJson.vue";
@@ -64,6 +65,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/databasejsonimportexport",
     name: "DatabaseJsonImportExport",
     component: DatabaseJsonImportExport,
+  },
+  {
+    path: "/databaseanimals",
+    name: "DatabaseAnimalsTest",
+    component: DatabaseAnimalsTest,
   },
   /*
   {

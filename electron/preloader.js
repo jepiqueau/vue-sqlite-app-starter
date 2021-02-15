@@ -1,1 +1,1 @@
-require('./node_modules/@capacitor-community/electron/dist/electron-bridge.js');require('./plugins/plugin.js-70ad81a5d38d6bb69f79658e81d5b08b.js');
+require('./node_modules/@capacitor-community/electron/dist/electron-bridge.js');require('./plugins/plugin.js-5f9aebd06e384b9eb44f8d9ebd0ecd08.js');

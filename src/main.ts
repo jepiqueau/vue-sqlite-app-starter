@@ -29,7 +29,8 @@ import { useState } from '@/composables/state';
 const {echo, getPlatform, createConnection, closeConnection,
   retrieveConnection, retrieveAllConnections, closeAllConnections,
   addUpgradeStatement, importFromJson, isJsonValid, 
-  copyFromAssets, isAvailable} = useSQLite();
+  copyFromAssets, isConnection, isDatabase, getDatabaseList, addSQLiteSuffix,
+  deleteOldDatabases, isAvailable} = useSQLite();
 //Existing Connections
 const [existConn, setExistConn] = useState(false);
 
@@ -48,6 +49,11 @@ app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
   importFromJson: importFromJson,
   isJsonValid: isJsonValid,
   copyFromAssets: copyFromAssets,
+  isConnection: isConnection,
+  isDatabase: isDatabase,
+  getDatabaseList: getDatabaseList,
+  addSQLiteSuffix: addSQLiteSuffix,
+  deleteOldDatabases: deleteOldDatabases,
   isAvailable:isAvailable};
 
 //  Existing Connections Store

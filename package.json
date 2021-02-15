@@ -1,6 +1,6 @@
 {
   "name": "vue-sqlite-app-starter",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Ionic/Vue SQLite Application Starter",
   "author": "Jean Pierre Quéau",
   "license": "MIT",
@@ -19,18 +19,18 @@
     "@capacitor/android": "^2.4.6",
     "@capacitor/core": "2.4.6",
     "@capacitor/ios": "^2.4.6",
-    "@ionic/vue": "latest",
-    "@ionic/vue-router": "latest",
+    "@ionic/vue": "^5.5.4",
+    "@ionic/vue-router": "^5.5.4",
     "core-js": "^3.8.3",
     "vue": "next",
     "vue-router": "next"
   },
   "devDependencies": {
-    "@capacitor-community/sqlite": "latest",
+    "@capacitor-community/sqlite": "^2.9.12",
     "@capacitor/cli": "2.4.6",
     "@types/jest": "^26.0.19",
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-e2e-cypress": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
@@ -45,7 +45,7 @@
     "eslint-plugin-vue": "^7.4.0",
     "typescript": "~4.0.5",
     "vue-jest": "^5.0.0-0",
-    "vue-sqlite-hook": "latest"
+    "vue-sqlite-hook": "^1.0.1"
   },
   "repository": {
     "type": "git",
