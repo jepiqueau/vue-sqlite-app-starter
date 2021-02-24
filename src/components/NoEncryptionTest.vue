@@ -55,6 +55,10 @@ export default defineComponent({
             res = await db.open();
             if(!res.result) return false;
             setLog(log.value.concat("> open 'NoEncryption' successful\n"));
+            res = await db.isDBOpen();
+            if(!res.result) return false;
+            setLog(log.value.concat("> isDBOpen 'NoEncryption' successful\n"));
+
             // Drop tables if exists
             res = await db.execute(dropTablesTablesNoEncryption);
             if(res.changes.changes !== 0 &&

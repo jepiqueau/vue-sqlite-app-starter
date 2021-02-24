@@ -30,6 +30,9 @@
           <IonItem>
             <ion-button @click="() => router.push('/databaseanimals')">SQLite Animals</ion-button>
           </IonItem> 
+          <IonItem>
+            <ion-button @click="() => router.push('/databaseoccurencies')">SQLite Occurencies</ion-button>
+          </IonItem> 
         </IonList>
     </ion-content>
   </ion-page>
