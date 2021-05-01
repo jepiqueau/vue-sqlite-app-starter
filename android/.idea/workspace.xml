@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="82802874-ad5a-4f83-9850-1961def66834" name="Default Changelist" comment="" />
+    <list default="true" id="82802874-ad5a-4f83-9850-1961def66834" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/utils/utils-import-from-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/utils/utils-import-from-json.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab2.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,10 +58,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_29" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-27T13:55:25.162Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">

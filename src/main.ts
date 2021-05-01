@@ -25,17 +25,42 @@ import './theme/variables.css';
 import { useSQLite } from 'vue-sqlite-hook/dist';
 import { useState } from '@/composables/state';
 
-// SQLite Hook  
-const {echo, getPlatform, createConnection, closeConnection,
-  retrieveConnection, retrieveAllConnections, closeAllConnections,
-  addUpgradeStatement, importFromJson, isJsonValid, 
-  copyFromAssets, isAvailable} = useSQLite();
-//Existing Connections
-const [existConn, setExistConn] = useState(false);
 
 const app = createApp(App)
   .use(IonicVue)
-  .use(router);
+  .use(router)
+
+const [jsonListeners, setJsonListeners] = useState(false);
+const [isModal, setIsModal] = useState(false);
+const [message, setMessage] = useState("");
+app.config.globalProperties.$isModalOpen = {isModal: isModal, setIsModal: setIsModal};
+app.config.globalProperties.$isJsonListeners = {jsonListeners: jsonListeners, setJsonListeners: setJsonListeners};
+app.config.globalProperties.$messageContent = {message: message, setMessage: setMessage};
+
+const onProgressImport = async (progress: string) => {
+  if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
+    if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
+    app.config.globalProperties.$messageContent.setMessage(
+        app.config.globalProperties.$messageContent.message.value.concat(`${progress}\n`));
+  }
+}
+const onProgressExport = async (progress: string) => {
+  if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
+    if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
+    app.config.globalProperties.$messageContent.setMessage(
+      app.config.globalProperties.$messageContent.message.value.concat(`${progress}\n`));
+  }
+}
+
+// SQLite Hook  
+const {echo, getPlatform, createConnection, closeConnection,
+  retrieveConnection, retrieveAllConnections, closeAllConnections,
+  isConnection, addUpgradeStatement, importFromJson, isJsonValid,
+  isDatabase, getDatabaseList, addSQLiteSuffix, deleteOldDatabases,
+  copyFromAssets, checkConnectionsConsistency, removeListeners, isAvailable} = useSQLite({
+    onProgressImport,
+    onProgressExport
+  });
 
 // Singleton SQLite Hook  
 app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
@@ -44,15 +69,24 @@ app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
   retrieveConnection: retrieveConnection,
   retrieveAllConnections: retrieveAllConnections,
   closeAllConnections: closeAllConnections,
+  isConnection: isConnection,
+  isDatabase: isDatabase,
+  getDatabaseList: getDatabaseList,
+  addSQLiteSuffix: addSQLiteSuffix,
+  deleteOldDatabases: deleteOldDatabases,
   addUpgradeStatement: addUpgradeStatement,
   importFromJson: importFromJson,
   isJsonValid: isJsonValid,
   copyFromAssets: copyFromAssets,
-  isAvailable:isAvailable};
+  checkConnectionsConsistency: checkConnectionsConsistency,
+  removeListeners: removeListeners,
+  isAvailable:isAvailable
+};
 
 //  Existing Connections Store
+const [existConn, setExistConn] = useState(false);
 app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
-  
+
 router.isReady().then(() => {
   app.mount('#app');
 });

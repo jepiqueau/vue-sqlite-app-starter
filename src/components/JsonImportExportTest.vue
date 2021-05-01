@@ -61,7 +61,7 @@ export default defineComponent({
                 setLog(log.value.concat("> importFromJson successful\n"));
 
                 // create a connection for "db-from-json"
-                let db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
+                const db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
                 setLog(log.value.concat("> createConnection " +
                                             " 'db-from-json' successful\n"));
                 // open db "db-from-json"
@@ -111,7 +111,7 @@ export default defineComponent({
                 if(res.changes.changes === -1 ) return Promise.reject("importFromJson Partial changes < 0 ");
                 setLog(log.value.concat("> importFromJson successful\n"));
                 // create a connection for "db-from-json"
-                let db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
+                const db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
                 setLog(log.value.concat("> createConnection " +
                                             " 'db-from-json' successful\n"));
                 // open db "db-from-json"
@@ -170,7 +170,7 @@ export default defineComponent({
             try {
                 setLog(log.value.concat("* Starting testFullExportToJson *\n"));
                 // create a connection for "db-from-json"
-                let db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
+                const db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
                 setLog(log.value.concat("> createConnection " +
                                             " 'db-from-json' successful\n"));
                 // open db "db-from-json"
@@ -178,9 +178,9 @@ export default defineComponent({
                 setLog(log.value.concat("> open " +
                                             " 'db-from-json' successful\n"));
                 // export to json full
-                let jsonObj: any = await db.exportToJson('full');
+                const jsonObj: any = await db.exportToJson('full');
                 // test Json object validity
-                let res: any = await sqlite.isJsonValid(JSON.stringify(jsonObj.export));
+                const res: any = await sqlite.isJsonValid(JSON.stringify(jsonObj.export));
                 if(!res.result) {
                     setLog(log.value.concat(`> isJsonValid ${res.message}\n`));
                     return Promise.reject("isJsonValid Full returns false")
@@ -202,7 +202,7 @@ export default defineComponent({
             try {
                 setLog(log.value.concat("* Starting testPartialExportToJson *\n"));
                 // create a connection for "db-from-json"
-                let db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
+                const db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
                  setLog(log.value.concat("> createConnection " +
                                             " 'db-from-json' successful\n"));
                 // open db "db-from-json"
@@ -213,9 +213,9 @@ export default defineComponent({
                 await db.setSyncDate("2020-05-20T18:40:00.000Z");
                 setLog(log.value.concat("> setSyncDate successful\n"));    
                 // export to json partial
-                let jsonObj: any = await db.exportToJson('partial');
+                const jsonObj: any = await db.exportToJson('partial');
                 // test Json object validity
-                let res: any = await sqlite.isJsonValid(JSON.stringify(jsonObj.export));
+                const res: any = await sqlite.isJsonValid(JSON.stringify(jsonObj.export));
                 if(!res.result) {
                     setLog(log.value.concat(`> isJsonValid ${res.message}\n`));
                 return Promise.reject("isJsonValid Export Partial returns false");

@@ -57,7 +57,7 @@ export default defineComponent({
                 }
                 setLog(log.value.concat("> Echo successful\n"));
                 // create a connection for NoEncryption
-                let db: SQLiteDBConnection = await sqlite.createConnection("NoEncryption");
+                const db: SQLiteDBConnection = await sqlite.createConnection("NoEncryption");
                 setLog(log.value.concat("> createConnection " +
                                             " 'NoEncryption' successful\n"));
                 // check if the databases exist 

@@ -49,14 +49,14 @@ export default defineComponent({
                 .concat("* Starting testDatabaseExistingConn *\n"));
             try {
                 // test the plugin with echo
-                let res: any = await sqlite.echo("Hello from echo");
+                const res: any = await sqlite.echo("Hello from echo");
                 if(res.value !== "Hello from echo") return false;
                 setLog(log.value.concat("> Echo successful\n"));
                 const db = await sqlite.retrieveConnection("testNew")
                 const db1 = await sqlite.retrieveConnection("testSet")
 
                 // load setUsers in db
-                var ret: any = await db.executeSet(setUsers);
+                let ret: any = await db.executeSet(setUsers);
                 console.log('$$$ ret.changes.changes in db ' + ret.changes.changes)
                 if (ret.changes.changes !== 3) {
                     errMess = `ExecuteSet setUsers changes != 3`;
@@ -102,7 +102,7 @@ export default defineComponent({
                 }
 
                 // test retrieve all connections
-                var retDict: Map<string, any> = await 
+                const retDict: Map<string, any> = await 
                                     sqlite.retrieveAllConnections();
                 if(retDict.size !== 2) {
                     errMess = `retrieveAllConnections not returning 2 values`;

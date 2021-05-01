@@ -121,7 +121,7 @@ export default defineComponent({
                 // add one user with statement and values              
                 let sqlcmd = 
                     "INSERT INTO users (name,email,age) VALUES (?,?,?)";
-                let values: Array<any>  = ["Simpson","Simpson@example.com",69];
+                const values: Array<any>  = ["Simpson","Simpson@example.com",69];
                 ret = await db.run(sqlcmd,values);
                 if(ret.changes.lastId !== 3) {
                     errMess = `Run lastId != 3`;
