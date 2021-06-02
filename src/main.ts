@@ -22,21 +22,23 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+/* SQLite imports */
 import { useSQLite } from 'vue-sqlite-hook/dist';
 import { useState } from '@/composables/state';
 
-
 const app = createApp(App)
   .use(IonicVue)
-  .use(router)
+  .use(router);
 
+/* SQLite Global Variables and Hook */
 const [jsonListeners, setJsonListeners] = useState(false);
 const [isModal, setIsModal] = useState(false);
 const [message, setMessage] = useState("");
 app.config.globalProperties.$isModalOpen = {isModal: isModal, setIsModal: setIsModal};
 app.config.globalProperties.$isJsonListeners = {jsonListeners: jsonListeners, setJsonListeners: setJsonListeners};
 app.config.globalProperties.$messageContent = {message: message, setMessage: setMessage};
-
+  
 const onProgressImport = async (progress: string) => {
   if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
     if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
@@ -51,42 +53,46 @@ const onProgressExport = async (progress: string) => {
       app.config.globalProperties.$messageContent.message.value.concat(`${progress}\n`));
   }
 }
-
+  
 // SQLite Hook  
 const {echo, getPlatform, createConnection, closeConnection,
   retrieveConnection, retrieveAllConnections, closeAllConnections,
   isConnection, addUpgradeStatement, importFromJson, isJsonValid,
   isDatabase, getDatabaseList, addSQLiteSuffix, deleteOldDatabases,
-  copyFromAssets, checkConnectionsConsistency, removeListeners, isAvailable} = useSQLite({
+  copyFromAssets, checkConnectionsConsistency, removeListeners,
+  isSecretStored, setEncryptionSecret, changeEncryptionSecret,isAvailable} = useSQLite({
     onProgressImport,
     onProgressExport
   });
-
-// Singleton SQLite Hook  
-app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
-  createConnection: createConnection,
-  closeConnection: closeConnection,
-  retrieveConnection: retrieveConnection,
-  retrieveAllConnections: retrieveAllConnections,
-  closeAllConnections: closeAllConnections,
-  isConnection: isConnection,
-  isDatabase: isDatabase,
-  getDatabaseList: getDatabaseList,
-  addSQLiteSuffix: addSQLiteSuffix,
-  deleteOldDatabases: deleteOldDatabases,
-  addUpgradeStatement: addUpgradeStatement,
-  importFromJson: importFromJson,
-  isJsonValid: isJsonValid,
-  copyFromAssets: copyFromAssets,
-  checkConnectionsConsistency: checkConnectionsConsistency,
-  removeListeners: removeListeners,
-  isAvailable:isAvailable
-};
-
-//  Existing Connections Store
-const [existConn, setExistConn] = useState(false);
-app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
-
+  
+  // Singleton SQLite Hook  
+  app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
+    createConnection: createConnection,
+    closeConnection: closeConnection,
+    retrieveConnection: retrieveConnection,
+    retrieveAllConnections: retrieveAllConnections,
+    closeAllConnections: closeAllConnections,
+    isConnection: isConnection,
+    isDatabase: isDatabase,
+    getDatabaseList: getDatabaseList,
+    addSQLiteSuffix: addSQLiteSuffix,
+    deleteOldDatabases: deleteOldDatabases,
+    addUpgradeStatement: addUpgradeStatement,
+    importFromJson: importFromJson,
+    isJsonValid: isJsonValid,
+    copyFromAssets: copyFromAssets,
+    checkConnectionsConsistency: checkConnectionsConsistency,
+    removeListeners: removeListeners,
+    isSecretStored: isSecretStored,
+    setEncryptionSecret: setEncryptionSecret,
+    changeEncryptionSecret: changeEncryptionSecret,
+    isAvailable:isAvailable
+  };
+  
+  //  Existing Connections Store
+  const [existConn, setExistConn] = useState(false);
+  app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
+    
 router.isReady().then(() => {
   app.mount('#app');
 });

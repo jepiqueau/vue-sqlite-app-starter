@@ -1,6 +1,6 @@
 {
   "name": "vue-sqlite-app-starter",
-  "version": "3.0.0-beta.1",
+  "version": "3.0.0-rc.1",
   "description": "Ionic/Vue SQLite Application Starter",
   "author": "Jean Pierre Quéau",
   "license": "MIT",
@@ -15,22 +15,20 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@capacitor-community/electron": "^1.4.1",
-    "@capacitor/android": "^3.0.0-rc.0",
-    "@capacitor/core": "^3.0.0-rc.0",
-    "@capacitor/dialog": "^0.4.6",
-    "@capacitor/ios": "^3.0.0-rc.0",
-    "@ionic/pwa-elements": "^3.0.2",
-    "@ionic/vue": "latest",
-    "@ionic/vue-router": "latest",
-    "core-js": "^3.8.3",
+    "@capacitor-community/electron": "^3.0.0-rc.6",
+    "@capacitor/android": "^3.0.0",
+    "@capacitor/core": "3.0.0",
+    "@capacitor/dialog": "^1.0.0",
+    "@capacitor/ios": "^3.0.0",
+    "@ionic/vue": "^5.4.0",
+    "@ionic/vue-router": "^5.4.0",
+    "core-js": "^3.6.5",
     "vue": "^3.0.0-0",
-    "vue-final-modal": "^3.1.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
-    "@capacitor-community/sqlite": "next",
-    "@capacitor/cli": "^3.0.0-rc.0",
+    "@capacitor-community/sqlite": "^3.0.0-rc.1",
+    "@capacitor/cli": "^3.0.0",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
@@ -48,7 +46,7 @@
     "eslint-plugin-vue": "^7.0.0-0",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0",
-    "vue-sqlite-hook": "^2.0.1"
+    "vue-sqlite-hook": "^2.0.2"
   },
   "repository": {
     "type": "git",

@@ -78,11 +78,13 @@ const routes: Array<RouteRecordRaw> = [
     name: "DatabaseExecuteSet",
     component: DatabaseExecuteSet,
   },
+  */
   {
     path: "/databasetoencrypt",
     name: "DatabaseToEncrypt",
     component: DatabaseToEncrypt,
   },
+  /*
   {
     path: "/databasefromtojson",
     name: "DatabaseFromToJson",
