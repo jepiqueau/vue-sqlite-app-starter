@@ -24,9 +24,9 @@ import { createTablesNoEncryption, importTwoUsers,
   dropTablesTablesNoEncryption } from '@/utils/utils-db-no-encryption';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 import { Dialog } from '@capacitor/dialog';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
 
 export default defineComponent({
     name: 'ToEncryptTest',
@@ -37,7 +37,7 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
-        const sqlite = app?.appContext.config.globalProperties.$sqlite;
+        const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
         let errMess = "";
         const showAlert = async (message: string) => {
             await Dialog.alert({

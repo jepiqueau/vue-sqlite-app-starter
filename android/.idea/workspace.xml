@@ -4,37 +4,30 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5f50009-41f0-48d0-97b9-85b23ca44abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/6.5/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2e6f6f57-35c7-4862-bd2a-2662a97b57c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/variables.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ionic.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/App/App.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/App/App.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/App/App/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/App/App/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/capacitor.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/tsconfig.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,24 +43,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1tNlyXihni09k7qIb8A7XFs2nqM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1wTkqmXJV9aVeEPrYwuAkh3kogr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@/Users/queaujeanpierre/.android/avd/Pixel_3a_XL_API_30.avd" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-02T07:08:53.305788Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-08-09T06:23:50.842160Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RunManager">
@@ -188,37 +174,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e5f50009-41f0-48d0-97b9-85b23ca44abf" name="Default Changelist" comment="" />
-      <created>1622617685221</created>
+      <changelist id="2e6f6f57-35c7-4862-bd2a-2662a97b57c3" name="Default Changelist" comment="" />
+      <created>1628490161356</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1622617685221</updated>
+      <updated>1628490161356</updated>
     </task>
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="246" y="198" key="#PSD" timestamp="1622617769270">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="246" y="198" key="#PSD/0.0.1680.1050@0.0.1680.1050" timestamp="1622617769270" />
-    <state width="1626" height="272" key="GridCell.Tab.0.bottom" timestamp="1622623801137">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1626" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1622623801137" />
-    <state width="1626" height="272" key="GridCell.Tab.0.center" timestamp="1622623801136">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1626" height="272" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1622623801136" />
-    <state width="1626" height="272" key="GridCell.Tab.0.left" timestamp="1622623801135">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1626" height="272" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1622623801135" />
-    <state width="1626" height="272" key="GridCell.Tab.0.right" timestamp="1622623801136">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1626" height="272" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1622623801136" />
   </component>
 </project>

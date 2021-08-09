@@ -22,7 +22,7 @@
 import { defineComponent, onMounted, getCurrentInstance } from 'vue';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection } from 'vue-sqlite-hook/dist';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
 import { Dialog } from '@capacitor/dialog';
 
 export default defineComponent({
@@ -34,7 +34,7 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
-        const sqlite = app?.appContext.config.globalProperties.$sqlite;
+        const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
         let errMess = "";
         const showAlert = async (message: string) => {
             await Dialog.alert({

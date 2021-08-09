@@ -26,6 +26,7 @@ import LoadingSpinner from '@/components/LoadingSpinner.vue'
 import { deleteDatabase } from '@/utils/utils-delete-db';
 import { createSchemaContacts, setContacts } from '@/utils/utils-db-encrypted-set';
 import { Dialog } from '@capacitor/dialog';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
 
 export default defineComponent({
     name: 'TwoDbsTest',
@@ -36,7 +37,7 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
-        const sqlite = app?.appContext.config.globalProperties.$sqlite;
+        const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
         let errMess = "";
         const showAlert = async (message: string) => {
             await Dialog.alert({
@@ -50,9 +51,9 @@ export default defineComponent({
                     .concat("* Starting testDatabaseTwoDbs *\n"));
 
                 // initialize the connection
-                const db = await sqlite
+                const db: SQLiteDBConnection = await sqlite
                     .createConnection("testNew", false, "no-encryption", 1);
-                const db1 = await sqlite
+                const db1: SQLiteDBConnection = await sqlite
                     .createConnection("testSet", true, "secret", 1);
 
                 // check if the databases exist 

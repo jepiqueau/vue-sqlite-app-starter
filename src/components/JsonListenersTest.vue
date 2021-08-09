@@ -20,7 +20,7 @@ import { defineComponent, onMounted, getCurrentInstance } from 'vue';
 import { createSchema112, firstTeachers, partialImport112} from '@/utils/utils-import-from-json';
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
-import { SQLiteDBConnection } from 'vue-sqlite-hook/dist';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
 import { deleteDatabase } from '@/utils/utils-delete-db';
 import { Dialog } from '@capacitor/dialog';
 
@@ -33,7 +33,7 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
-        const sqlite = app?.appContext.config.globalProperties.$sqlite;
+        const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
         app?.appContext.config.globalProperties.$isJsonListeners.setJsonListeners(true);
         let jsonObj: any;
         const showAlert = async (message: string) => {

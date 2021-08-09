@@ -24,7 +24,7 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 /* SQLite imports */
-import { useSQLite } from 'vue-sqlite-hook/dist';
+import { useSQLite, SQLiteHook} from 'vue-sqlite-hook/dist';
 import { useState } from '@/composables/state';
 
 const app = createApp(App)
@@ -65,8 +65,7 @@ const {echo, getPlatform, createConnection, closeConnection,
     onProgressExport
   });
   
-  // Singleton SQLite Hook  
-  app.config.globalProperties.$sqlite = {echo: echo, getPlatform: getPlatform,
+  const hook: SQLiteHook = {echo: echo, getPlatform: getPlatform,
     createConnection: createConnection,
     closeConnection: closeConnection,
     retrieveConnection: retrieveConnection,
@@ -88,6 +87,8 @@ const {echo, getPlatform, createConnection, closeConnection,
     changeEncryptionSecret: changeEncryptionSecret,
     isAvailable:isAvailable
   };
+  // Singleton SQLite Hook  
+  app.config.globalProperties.$sqlite = hook;
   
   //  Existing Connections Store
   const [existConn, setExistConn] = useState(false);

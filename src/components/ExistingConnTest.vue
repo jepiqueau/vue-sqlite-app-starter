@@ -25,6 +25,7 @@ import { createSchemaMessages, setMessages } from '@/utils/utils-db-encrypted-se
 import { useState } from '@/composables/state';
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
 import { Dialog } from '@capacitor/dialog';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
 
 export default defineComponent({
     name: 'ExistingConnTest',
@@ -35,7 +36,7 @@ export default defineComponent({
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
-        const sqlite = app?.appContext.config.globalProperties.$sqlite;
+        const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
         let errMess = "";
         const showAlert = async (message: string) => {
             await Dialog.alert({
@@ -52,8 +53,8 @@ export default defineComponent({
                 const res: any = await sqlite.echo("Hello from echo");
                 if(res.value !== "Hello from echo") return false;
                 setLog(log.value.concat("> Echo successful\n"));
-                const db = await sqlite.retrieveConnection("testNew")
-                const db1 = await sqlite.retrieveConnection("testSet")
+                const db: SQLiteDBConnection = await sqlite.retrieveConnection("testNew")
+                const db1: SQLiteDBConnection = await sqlite.retrieveConnection("testSet")
 
                 // load setUsers in db
                 let ret: any = await db.executeSet(setUsers);
