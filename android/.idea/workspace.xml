@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e6f6f57-35c7-4862-bd2a-2662a97b57c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/assets/appIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/assets/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/capacitor.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../electron/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

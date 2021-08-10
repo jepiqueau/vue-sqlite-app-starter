@@ -54,45 +54,14 @@ const onProgressExport = async (progress: string) => {
   }
 }
   
-// SQLite Hook  
-const {echo, getPlatform, createConnection, closeConnection,
-  retrieveConnection, retrieveAllConnections, closeAllConnections,
-  isConnection, addUpgradeStatement, importFromJson, isJsonValid,
-  isDatabase, getDatabaseList, addSQLiteSuffix, deleteOldDatabases,
-  copyFromAssets, checkConnectionsConsistency, removeListeners,
-  isSecretStored, setEncryptionSecret, changeEncryptionSecret,isAvailable} = useSQLite({
-    onProgressImport,
-    onProgressExport
-  });
-  
-  const hook: SQLiteHook = {echo: echo, getPlatform: getPlatform,
-    createConnection: createConnection,
-    closeConnection: closeConnection,
-    retrieveConnection: retrieveConnection,
-    retrieveAllConnections: retrieveAllConnections,
-    closeAllConnections: closeAllConnections,
-    isConnection: isConnection,
-    isDatabase: isDatabase,
-    getDatabaseList: getDatabaseList,
-    addSQLiteSuffix: addSQLiteSuffix,
-    deleteOldDatabases: deleteOldDatabases,
-    addUpgradeStatement: addUpgradeStatement,
-    importFromJson: importFromJson,
-    isJsonValid: isJsonValid,
-    copyFromAssets: copyFromAssets,
-    checkConnectionsConsistency: checkConnectionsConsistency,
-    removeListeners: removeListeners,
-    isSecretStored: isSecretStored,
-    setEncryptionSecret: setEncryptionSecret,
-    changeEncryptionSecret: changeEncryptionSecret,
-    isAvailable:isAvailable
-  };
-  // Singleton SQLite Hook  
-  app.config.globalProperties.$sqlite = hook;
-  
-  //  Existing Connections Store
-  const [existConn, setExistConn] = useState(false);
-  app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
+app.config.globalProperties.$sqlite = useSQLite({
+  onProgressImport,
+  onProgressExport
+});
+
+//  Existing Connections Store
+const [existConn, setExistConn] = useState(false);
+app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};
     
 router.isReady().then(() => {
   app.mount('#app');
