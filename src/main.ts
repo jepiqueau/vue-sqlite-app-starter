@@ -24,8 +24,12 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 /* SQLite imports */
-import { useSQLite, SQLiteHook} from 'vue-sqlite-hook/dist';
+import { defineCustomElements as jeepSqlite, applyPolyfills } from "jeep-sqlite/loader";
 import { useState } from '@/composables/state';
+
+applyPolyfills().then(() => {
+    jeepSqlite(window);
+});
 
 const app = createApp(App)
   .use(IonicVue)
@@ -38,7 +42,8 @@ const [message, setMessage] = useState("");
 app.config.globalProperties.$isModalOpen = {isModal: isModal, setIsModal: setIsModal};
 app.config.globalProperties.$isJsonListeners = {jsonListeners: jsonListeners, setJsonListeners: setJsonListeners};
 app.config.globalProperties.$messageContent = {message: message, setMessage: setMessage};
-  
+
+/*
 const onProgressImport = async (progress: string) => {
   if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
     if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
@@ -58,7 +63,7 @@ app.config.globalProperties.$sqlite = useSQLite({
   onProgressImport,
   onProgressExport
 });
-
+*/
 //  Existing Connections Store
 const [existConn, setExistConn] = useState(false);
 app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};

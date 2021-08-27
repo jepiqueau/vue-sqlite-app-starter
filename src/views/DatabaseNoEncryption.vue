@@ -16,14 +16,7 @@
       </ion-header>
       <ion-card>
         <ion-card-content>
-          <Suspense>
-            <template #default>
-              <NoEncryptionTest />
-            </template>
-            <template #feedback>
-              <div> Loading ... </div>
-            </template>
-          </Suspense>
+          <NoEncryptionTest />
         </ion-card-content>
       </ion-card>
     </ion-content>

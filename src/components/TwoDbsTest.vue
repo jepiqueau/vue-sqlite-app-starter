@@ -33,7 +33,8 @@ export default defineComponent({
     components: {
         LoadingSpinner
     },
-    async setup() {
+    setup() {
+        console.log('$$$ Start TwoDbsTest setup $$$')
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
@@ -146,9 +147,12 @@ export default defineComponent({
                 return false;
             }
         }
+        
         onMounted(async () => {
             // Running the test
+            console.log('$$$ Start TwoDbsTest on Mounted $$$')
             const retTwoDbs: boolean = await twoDbsTest();
+            console.log(`retTwoDbs: ${retTwoDbs}`)
             setShowSpinner(false);
             if(!retTwoDbs) {
                 setLog(log.value
@@ -160,7 +164,10 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
+            console.log('$$$ End TwoDbsTest on Mounted $$$')
+
         });
+        console.log('$$$ End TwoDbsTest setup $$$')
         return { log, showSpinner, errMess };
     },
 });

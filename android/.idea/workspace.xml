@@ -4,8 +4,30 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e6f6f57-35c7-4862-bd2a-2662a97b57c3" name="Default Changelist" comment="">
+    <list default="true" id="4603dc61-913d-4485-9227-9fe46e0bc625" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/variables.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/variables.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/CopyFromAssetsTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ExistingConnTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonImportExportTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/JsonListenersTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/NoEncryptionTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/ToEncryptTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/TwoDbsTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseCopyFromAssets.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseCopyFromAssets.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseExistingConn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseExistingConn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseJsonImportExport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseJsonImportExport.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseJsonListeners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseJsonListeners.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseNoEncryption.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseNoEncryption.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseToEncrypt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseToEncrypt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/DatabaseTwoDbs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/DatabaseTwoDbs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tabs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +43,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1wTkqmXJV9aVeEPrYwuAkh3kogr" />
+  <component name="ProjectId" id="1xJui5PvNZFIYcT235RcXFODm3f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@/Users/queaujeanpierre/.android/avd/Pixel_3a_XL_API_30.avd" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-08-09T06:23:50.842160Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
@@ -152,11 +172,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e6f6f57-35c7-4862-bd2a-2662a97b57c3" name="Default Changelist" comment="" />
-      <created>1628490161356</created>
+      <changelist id="4603dc61-913d-4485-9227-9fe46e0bc625" name="Default Changelist" comment="" />
+      <created>1630085637213</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1628490161356</updated>
+      <updated>1630085637213</updated>
     </task>
     <servers />
   </component>

@@ -30,7 +30,7 @@ export default defineComponent({
     components: {
         LoadingSpinner
     },
-    async setup() {
+    setup() {
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
@@ -46,6 +46,7 @@ export default defineComponent({
             try {
                 setLog(log.value
                     .concat("* Starting testDatabaseCopyFromAssets *\n"));
+                console.log(`sqlite ${JSON.stringify(sqlite)}`);
                 await sqlite.copyFromAssets();
                 setLog(log.value.concat("> copyFromAssets successful\n"));
 
@@ -103,13 +104,16 @@ export default defineComponent({
                     .concat("* Ending testDatabaseCopyFromAssets *\n"));
                 return true;
             } catch (err) {
-                errMess = `${err.message}`;
+                errMess = `${err}`;
                 return false;
             }
         }
+        
         onMounted(async () => {
             // Running the test
+            console.log('$$$ Start CopyFromAssets on Mounted $$$')
             const retCopyFromAssets: boolean = await copyFromAssetsTest();
+            console.log(`retCopyFromAssets: ${retCopyFromAssets}`)
             setShowSpinner(false);
             if(!retCopyFromAssets) {
                 setLog(log.value
@@ -121,6 +125,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
+            console.log('$$$ End CopyFromAssetsTest on Mounted $$$')
         });
         return { log, showSpinner, errMess };
     },

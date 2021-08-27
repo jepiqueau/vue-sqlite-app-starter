@@ -16,14 +16,7 @@
       </ion-header>
       <ion-card>
         <ion-card-content>
-          <Suspense>
-            <template #default>
-              <ToEncryptTest />
-            </template>
-            <template #feedback>
-              <div> Loading ... </div>
-            </template>
-          </Suspense>
+          <ToEncryptTest />
         </ion-card-content>
       </ion-card>
     </ion-content>

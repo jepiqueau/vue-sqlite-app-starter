@@ -3,8 +3,8 @@
 <h3 align="center">Ionic/Vue SQLite App Starter</h3>
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
-<p align="center"><strong><code>@capacitor-community/sqlite@next plugin<code></strong></p>
-<p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 3 🚧</strong></p><br>
+<p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
+<p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 3 </strong></p><br>
 <br>
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
@@ -27,7 +27,7 @@
 
 The components `EncryptionTest.vue` and `UpgradeVersionTest.vue`have still to be created
 
-## Installation 🚧
+## Installation 
 
 To start clone the project
 
@@ -44,17 +44,23 @@ To install the latest release of the ```@capacitor-community/sqlite``` plugin
 npm run update
 npm run build 
 npx cap sync
+npx cap sync @capacitor-community/electron
 npm run build
 npx cap copy
 npx cap copy web
+npx cap copy @capacitor-community/electron
 ```
 
 ## Running the app
 
+The assets databases should be in the `public/assets/databases`folder
+
 ### BROWSER
 
+The `sql-wasm.wasm` file should be copied from `node_modules/sql.js/dist`folder to `public/assets`folder
+
 ```
-npx cap serve
+npx run serve
 ```
 
 ### IOS
@@ -69,6 +75,13 @@ npx cap open ios
 npx cap open android
 ```
 
+### ELECTRON
+
+```
+npx cap open @capacitor-community/electron
+```
+
+WARNING for ELECTRON the assets databases should be in the `src/assets/databases
 
 ## Accessing the tests 🚧
 

@@ -16,14 +16,7 @@
       </ion-header>
       <ion-card>
         <ion-card-content>
-          <Suspense>
-            <template #default>
-              <JsonListenersTest />
-            </template>
-            <template #feedback>
-              <div> Loading ... </div>
-            </template>
-          </Suspense>
+          <JsonListenersTest />
         </ion-card-content>
       </ion-card>
     </ion-content>

@@ -33,7 +33,9 @@ export default defineComponent({
     components: {
         LoadingSpinner
     },
-    async setup() {
+
+    setup() {
+        console.log('$$$ Start NoEncryptionTest setup $$$')
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
@@ -47,6 +49,7 @@ export default defineComponent({
         };
         const noEncryptionTest = async (): Promise<boolean>  => {
             try {
+                console.log(' Starting testDatabaseNoEncryption')
                 setLog(log.value
                     .concat("* Starting testDatabaseNoEncryption *\n"));
                 // test the plugin with echo
@@ -55,11 +58,13 @@ export default defineComponent({
                     errMess = `Echo not returning "Hello from echo"`;
                     return false;
                 }
+                console.log(`after echo ${JSON.stringify(res)}`);
                 setLog(log.value.concat("> Echo successful\n"));
                 // create a connection for NoEncryption
                 const db: SQLiteDBConnection = await sqlite.createConnection("NoEncryption");
                 setLog(log.value.concat("> createConnection " +
                                             " 'NoEncryption' successful\n"));
+                console.log("after createConnection")
                 // check if the databases exist 
                 // and delete it for multiple successive tests
                 await deleteDatabase(db);         
@@ -145,10 +150,13 @@ export default defineComponent({
                 errMess = `${err.message}`;
                 return false;
             }
-        }
+        };
+        
         onMounted(async () => {
             // Running the test
+            console.log('$$$ Start NoEncryptionTest on Mounted $$$')
             const retNoEncryption: boolean = await noEncryptionTest();
+            console.log(`retNoEncryption ${retNoEncryption}`);
             setShowSpinner(false);
             if(!retNoEncryption) {
                 setLog(log.value
@@ -160,7 +168,11 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
+            console.log('$$$ End NoEncryptionTest on Mounted $$$')
+
         });
+        console.log('$$$ End NoEncryptionTest setup $$$')
+
         return { log, showSpinner, errMess };
     },
 });

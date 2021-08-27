@@ -30,7 +30,7 @@
         <IonItem>
           <ion-button @click="() => router.push('/databasejsonlisteners')">SQLite Json Listeners</ion-button>
         </IonItem> 
-        <IonItem>
+        <IonItem v-if="isNative">
           <ion-button @click="() => router.push('/databasetoencrypt')">SQLite Encryption</ion-button>
         </IonItem> 
       </IonList>
@@ -46,39 +46,48 @@
 <script lang="ts">
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
            IonButton, IonList, IonItem } from '@ionic/vue';
-  import { defineComponent, getCurrentInstance, onMounted } from 'vue';
+  import { defineComponent, getCurrentInstance, onMounted, ref } from 'vue';
   import { useRouter } from 'vue-router';
   import ModalJsonMessages from '@/components/ModalJsonMessages.vue';
+  import { SQLiteHook } from 'vue-sqlite-hook/dist';
+  import { useState } from '@/composables/state';
 
   export default defineComponent({
     name: 'Tab2',
     components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,
                   IonButton, IonList, IonItem, ModalJsonMessages },
     setup() {
+      const [isNative, setIsNative] = useState(false);
       const router = useRouter();
       const app = getCurrentInstance();
       const existingConn = app?.appContext.config.globalProperties.$existingConn;
       const isModalOpen = app?.appContext.config.globalProperties.$isModalOpen;
       const contentMessage = app?.appContext.config.globalProperties.$messageContent;
-      const sqlite = app?.appContext.config.globalProperties.$sqlite;
+      const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
 
       const handleModalClosed = () => {
         isModalOpen.setIsModal(false);
         contentMessage.setMessage("");
       }
       onMounted(async () => {
+        console.log('TAB2 mounted')
         // Deal with the secure secret if you need it
         // by using an input form
         // here i used a constant
-        const secretPhrase = 'abbey clammy gird night test';
-        const isSet = await sqlite.isSecretStored()
-        if(!isSet.result) {
-          await sqlite.setEncryptionSecret(secretPhrase);
+        const platform = (await sqlite.getPlatform()).platform;
+        console.log(`TAB2 onMounted platform ${platform}`);
+        if(platform === 'ios' || platform === 'android') {
+          setIsNative(true); 
+          const secretPhrase = 'abbey clammy gird night test';
+          const isSet = await sqlite.isSecretStored()
+          if(!isSet.result) {
+            await sqlite.setEncryptionSecret(secretPhrase);
+          }
         }
-
       });
 
-      return { router, existingConn, handleModalClosed, isModalOpen, contentMessage};
+      return { router, existingConn, handleModalClosed, isModalOpen,
+               contentMessage, isNative};
     }
   })
 </script>

@@ -16,14 +16,7 @@
       </ion-header>
       <ion-card>
         <ion-card-content>
-          <Suspense>
-            <template #default>
-              <ExistingConnTest />
-            </template>
-            <template #feedback>
-              <div> Loading ... </div>
-            </template>
-          </Suspense>
+          <ExistingConnTest />
         </ion-card-content>
       </ion-card>
     </ion-content>

@@ -29,7 +29,7 @@ export default defineComponent({
     components: {
         LoadingSpinner
     },
-    async setup() {
+    setup() {
         const [showSpinner, setShowSpinner] = useState(true);
         const [log, setLog] = useState("");
         const app = getCurrentInstance()
