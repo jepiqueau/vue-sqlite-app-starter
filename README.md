@@ -81,8 +81,6 @@ npx cap open android
 npx cap open @capacitor-community/electron
 ```
 
-WARNING for ELECTRON the assets databases should be in the `src/assets/databases
-
 ## Accessing the tests 🚧
 
 Go to the Tab2 of the application

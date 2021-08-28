@@ -35,7 +35,7 @@ const app = createApp(App)
   .use(IonicVue)
   .use(router);
 
-/* SQLite Global Variables and Hook */
+/* SQLite Global Variables*/
 const [jsonListeners, setJsonListeners] = useState(false);
 const [isModal, setIsModal] = useState(false);
 const [message, setMessage] = useState("");
@@ -43,27 +43,6 @@ app.config.globalProperties.$isModalOpen = {isModal: isModal, setIsModal: setIsM
 app.config.globalProperties.$isJsonListeners = {jsonListeners: jsonListeners, setJsonListeners: setJsonListeners};
 app.config.globalProperties.$messageContent = {message: message, setMessage: setMessage};
 
-/*
-const onProgressImport = async (progress: string) => {
-  if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
-    if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
-    app.config.globalProperties.$messageContent.setMessage(
-        app.config.globalProperties.$messageContent.message.value.concat(`${progress}\n`));
-  }
-}
-const onProgressExport = async (progress: string) => {
-  if(app.config.globalProperties.$isJsonListeners.jsonListeners.value) {
-    if(!app.config.globalProperties.$isModalOpen.isModal.value) app.config.globalProperties.$isModalOpen.setIsModal(true);
-    app.config.globalProperties.$messageContent.setMessage(
-      app.config.globalProperties.$messageContent.message.value.concat(`${progress}\n`));
-  }
-}
-  
-app.config.globalProperties.$sqlite = useSQLite({
-  onProgressImport,
-  onProgressExport
-});
-*/
 //  Existing Connections Store
 const [existConn, setExistConn] = useState(false);
 app.config.globalProperties.$existingConn = {existConn: existConn, setExistConn: setExistConn};

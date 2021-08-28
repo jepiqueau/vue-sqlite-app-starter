@@ -46,7 +46,7 @@
 <script lang="ts">
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
            IonButton, IonList, IonItem } from '@ionic/vue';
-  import { defineComponent, getCurrentInstance, onMounted, ref } from 'vue';
+  import { defineComponent, getCurrentInstance, onMounted } from 'vue';
   import { useRouter } from 'vue-router';
   import ModalJsonMessages from '@/components/ModalJsonMessages.vue';
   import { SQLiteHook } from 'vue-sqlite-hook/dist';
