@@ -13,6 +13,7 @@ import DatabaseFromToJson from "@/views/DatabaseFromToJson.vue";
 import DatabaseEncrypted from "@/views/DatabaseEncrypted.vue";
 import DatabaseUpgradeVersion from "@/views/DatabaseUpgradeVersion.vue";
 import NotFound from "@/views/NotFound.vue";
+import DatabaseJsonImportIssue177 from "@/views/DatabaseJsonImportIssue177.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -71,7 +72,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "DatabaseJsonListeners",
     component: DatabaseJsonListeners,
   },
-  
+  {
+    path: "/databasejsonimportissue177",
+    name: "DatabaseJsonImportIssue177",
+    component: DatabaseJsonImportIssue177,
+  },
+
   /*
   {
     path: "/databaseexecuteset",

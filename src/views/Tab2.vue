@@ -30,6 +30,11 @@
         <IonItem>
           <ion-button @click="() => router.push('/databasejsonlisteners')">SQLite Json Listeners</ion-button>
         </IonItem> 
+        <IonItem>
+          <ion-button @click="() => router.push('/databasejsonimportissue177')">SQLite Json Import Issue#177</ion-button>
+        </IonItem> 
+
+        
         <IonItem v-if="isNative">
           <ion-button @click="() => router.push('/databasetoencrypt')">SQLite Encryption</ion-button>
         </IonItem> 

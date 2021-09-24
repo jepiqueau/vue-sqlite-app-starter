@@ -302,7 +302,14 @@ export const fullImport177: any = {
               {"name": "index_ticket_on_last_modified","value": "last_modified DESC"},
               {"name": "index_ticket_on_title_desc", "value": "title ASC, desc"}
           ],
-      },
+          "triggers": [
+            {
+            "name": "trigger_after_update_recordType_tickets",
+            "timeevent": "AFTER UPDATE",
+            "logic":"WHEN NEW.recordType = 3 BEGIN UPDATE images SET recordType = 3 WHERE ticketId=OLD.id; END;"
+            }
+        ]
+    },
       {
         "name": "images",
         "schema": [
