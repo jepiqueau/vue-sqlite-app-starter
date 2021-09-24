@@ -54,12 +54,10 @@ export default defineComponent({
                 res = await sqlite.isJsonValid(JSON.stringify(dataToImport));
                 if(!res.result) return Promise.reject("isJsonValid is returning false");
                 setLog(log.value.concat("> isJsonValid successful\n"));
-
                 // test import from Json Object
                 res = await sqlite.importFromJson(JSON.stringify(dataToImport)); 
                 if(res.changes.changes === -1 ) return Promise.reject("importFromJson changes < 0");
                 setLog(log.value.concat("> importFromJson successful\n"));
-
                 // create a connection for "db-from-json"
                 const db: SQLiteDBConnection = await sqlite.createConnection("db-from-json", false, "no-encryption", 1);
                 setLog(log.value.concat("> createConnection " +
@@ -95,7 +93,6 @@ export default defineComponent({
             } catch (err) {
                 return Promise.reject(err.message);
             }
-
         }
         const jsonImportPartialTest = async (): Promise<void>  => {
             /**
@@ -131,7 +128,6 @@ export default defineComponent({
                 }
                 setLog(log.value.concat("> query " +
                                             " 'users' successful\n"));
-
                 // select all messages in db
                 res = await db.query("SELECT * FROM messages;");
                 if(res.values.length !== 4|| 
@@ -143,7 +139,6 @@ export default defineComponent({
                 }
                 setLog(log.value.concat("> query " +
                                             " 'messages' successful\n"));
-
                 // select all images in db
                 res = await db.query("SELECT * FROM images;");
                 if(res.values.length !== 2 || 
@@ -153,7 +148,6 @@ export default defineComponent({
                 }
                 setLog(log.value.concat("> query " +
                                         " 'images' successful\n"));
-
                 // close the connection
                 await sqlite.closeConnection("db-from-json"); 
                 setLog(log.value.concat("> closeConnection successful\n"));
@@ -241,7 +235,6 @@ export default defineComponent({
                 return Promise.reject(err.message);
             }
         }
-
         onMounted(async () => {
             // Running the test
             setLog(log.value
@@ -264,7 +257,6 @@ export default defineComponent({
                 setLog(log.value
                         .concat("\n* The set of tests failed *\n"));
                 await showAlert(err);
-
             }
         });
         return { log, showSpinner };

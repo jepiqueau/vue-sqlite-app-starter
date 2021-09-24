@@ -277,3 +277,63 @@ export const partialImport112: any = {
         }
     ]
 };
+export const fullImport177: any = {
+  "database": "consumer_plangei_",
+  "version":418,
+  "encrypted": false,
+  "mode": "full",
+  "tables":[
+  
+      {
+          "name": "tickets",
+          "schema": [
+              { "column": "id", "value": "INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL" },
+              { "column": "syncId", "value": "TEXT UNIQUE" },
+              { "column": "num", "value": "TEXT UNIQUE NOT NULL" },
+              { "column": "siteId", "value": "TEXT NOT NULL" },
+              { "column": "title", "value": "TEXT NOT NULL" },
+              { "column": "desc", "value": "TEXT" },
+              { "column": "recordType", "value": "INTEGER DEFAULT 0 NOT NULL" },
+              { "column": "editable", "value": "INTEGER DEFAULT 0 NOT NULL" },
+              { "column": "deletable", "value": "INTEGER DEFAULT 0 NOT NULL" },
+              { "column": "last_modified", "value":"INTEGER DEFAULT (strftime('%s', 'now'))" }
+          ],
+          "indexes": [
+              {"name": "index_ticket_on_last_modified","value": "last_modified DESC"},
+              {"name": "index_ticket_on_title_desc", "value": "title ASC, desc"}
+          ],
+      },
+      {
+        "name": "images",
+        "schema": [
+          { "column": "id", "value": "INTEGER PRIMARY KEY NOT NULL" },
+          { "column": "syncId", "value": "TEXT UNIQUE" },
+          { "column": "name", "value": "TEXT" },
+          { "column": "format", "value": "TEXT" },
+          { "column": "exif", "value": "TEXT" },
+          { "column": "webPath", "value": "TEXT NOT NULL"},
+          { "column": "path", "value": "TEXT NOT NULL"},
+          { "column": "ticketId", "value": "INTEGER NOT NULL" },
+          { "column": "recordType", "value": "INTEGER DEFAULT 0 NOT NULL" },
+          { "column": "editable", "value": "INTEGER DEFAULT 0 NOT NULL" },
+          { "column": "deletable", "value": "INTEGER DEFAULT 0 NOT NULL" },
+          { "column": "last_modified", "value": "INTEGER DEFAULT (strftime('%s', 'now'))" },
+          { "foreignkey": "ticketId", "value": "REFERENCES tickets(id) ON DELETE CASCADE" }
+        ],
+        "indexes": [
+          {"name": "index_images_on_ticketId","value": "ticketId"},
+          { "name": "index_images_on_last_modified", "value": "last_modified DESC" }
+        ]
+      }
+  ]
+};
+
+/*
+          "triggers": [
+              {
+              "name": "trigger_after_update_recordType_tickets",
+              "timeevent": "AFTER UPDATE",
+              "logic":"BEGIN SELECT CASE WHEN NEW.recordType = 3 THEN UPDATE images SET recordType = 3 WHERE ticketId=OLD.id END; END"
+              }
+          ]
+*/

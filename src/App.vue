@@ -49,7 +49,13 @@ export default defineComponent({
             contentMessage.message.value.concat(`${progress}\n`));
         }
       }
-      if( app != null) {  
+      if( app != null) { 
+        // !!!!! if you do not want to use the progress events !!!!!
+        // since vue-sqlite-hook 2.1.1
+        // app.appContext.config.globalProperties.$sqlite = useSQLite()
+        // before
+        // app.appContext.config.globalProperties.$sqlite = useSQLite({})
+        // !!!!!                                               !!!!!
         app.appContext.config.globalProperties.$sqlite = useSQLite({
           onProgressImport,
           onProgressExport
@@ -58,6 +64,8 @@ export default defineComponent({
           await customElements.whenDefined('jeep-sqlite');
           const jeepSqliteEl = document.querySelector('jeep-sqlite');
           if(jeepSqliteEl != null) {
+            // Initialize the Web Store since @capacitor-community/sqlite@3.2.3-1
+            await app.appContext.config.globalProperties.$sqlite.initWebStore()
             console.log(`$$ jeepSqliteEl ${JSON.stringify(jeepSqliteEl)}`);
           } else {
             console.log('$$ jeepSqliteEl is null');
