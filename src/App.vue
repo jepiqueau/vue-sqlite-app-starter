@@ -65,16 +65,16 @@ export default defineComponent({
           const jeepSqliteEl = document.querySelector('jeep-sqlite');
           if(jeepSqliteEl != null) {
             // Initialize the Web Store since @capacitor-community/sqlite@3.2.3-1
-            await app.appContext.config.globalProperties.$sqlite.initWebStore()
+            await app.appContext.config.globalProperties.$sqlite.initWebStore();
             console.log(`$$ jeepSqliteEl ${JSON.stringify(jeepSqliteEl)}`);
           } else {
             console.log('$$ jeepSqliteEl is null');
           }
         }
-          console.log('after useSQLite')
+          console.log('after useSQLite');
       }
     });
-    return {platform}
+    return {platform};
   }
 });
 </script>
