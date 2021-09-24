@@ -334,13 +334,3 @@ export const fullImport177: any = {
       }
   ]
 };
-
-/*
-          "triggers": [
-              {
-              "name": "trigger_after_update_recordType_tickets",
-              "timeevent": "AFTER UPDATE",
-              "logic":"BEGIN SELECT CASE WHEN NEW.recordType = 3 THEN UPDATE images SET recordType = 3 WHERE ticketId=OLD.id END; END"
-              }
-          ]
-*/
