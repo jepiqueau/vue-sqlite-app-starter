@@ -75,12 +75,10 @@
         contentMessage.setMessage("");
       }
       onMounted(async () => {
-        console.log('TAB2 mounted')
         // Deal with the secure secret if you need it
         // by using an input form
         // here i used a constant
         const platform = (await sqlite.getPlatform()).platform;
-        console.log(`TAB2 onMounted platform ${platform}`);
         if(platform === 'ios' || platform === 'android') {
           setIsNative(true); 
           const secretPhrase = 'abbey clammy gird night test';
