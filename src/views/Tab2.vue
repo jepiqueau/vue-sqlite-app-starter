@@ -38,6 +38,9 @@
         <IonItem v-if="isNative">
           <ion-button @click="() => router.push('/databasetoencrypt')">SQLite Encryption</ion-button>
         </IonItem> 
+        <IonItem v-if="isNative">
+          <ion-button @click="() => router.push('/databasemigrate')">SQLite Database Migrate</ion-button>
+        </IonItem> 
       </IonList>
       <ModalJsonMessages :is-open="isModalOpen.isModal.value"
                          :message="contentMessage.message.value" 

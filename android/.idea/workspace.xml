@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4603dc61-913d-4485-9227-9fe46e0bc625" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electron/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../electron/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electron/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
