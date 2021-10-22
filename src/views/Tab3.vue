@@ -48,10 +48,14 @@ export default defineComponent({
         console.log(`query ${JSON.stringify(res)}`);
         tests.value = res.values;
         console.log(`tests ${JSON.stringify(tests.value)}`);
+
+        let isTable = await db.isTable("test");
+        console.log(`isTable test: ${JSON.stringify(isTable)}`)
         await db.close();
         await sqlite.closeConnection("db_tab3");
         return true;
-      } catch(err) {
+      } catch(err: any) {
+        console.log(`Error: ${err}`)
         errMess.value = err;
         return false;
       }

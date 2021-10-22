@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -12,14 +7,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4603dc61-913d-4485-9227-9fe46e0bc625" name="Default Changelist" comment="">
+    <list default="true" id="7d5316c2-5dd8-477c-823d-6ffac176d5c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../electron/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electron/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../electron/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../electron/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/views/Tab3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/views/Tab3.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1xJui5PvNZFIYcT235RcXFODm3f" />
+  <component name="ProjectId" id="1zqqKOPV2fQvi7jPbMaEEkeWAeD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@/Users/queaujeanpierre/.android/avd/Pixel_3a_XL_API_30.avd" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-09-24T08:50:55.875043Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
@@ -166,11 +158,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4603dc61-913d-4485-9227-9fe46e0bc625" name="Default Changelist" comment="" />
-      <created>1630085637213</created>
+      <changelist id="7d5316c2-5dd8-477c-823d-6ffac176d5c1" name="Default Changelist" comment="" />
+      <created>1634885900713</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1630085637213</updated>
+      <updated>1634885900713</updated>
     </task>
     <servers />
   </component>
