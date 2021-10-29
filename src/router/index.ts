@@ -15,6 +15,7 @@ import DatabaseUpgradeVersion from "@/views/DatabaseUpgradeVersion.vue";
 import NotFound from "@/views/NotFound.vue";
 import DatabaseJsonImportIssue177 from "@/views/DatabaseJsonImportIssue177.vue";
 import DatabaseMigrate from "@/views/DatabaseMigrate.vue";
+import DatabaseJsonImportIssue192 from "@/views/DatabaseJsonImportIssue192.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -77,6 +78,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/databasejsonimportissue177",
     name: "DatabaseJsonImportIssue177",
     component: DatabaseJsonImportIssue177,
+  },
+  {
+    path: "/databasejsonimportissue192",
+    name: "DatabaseJsonImportIssue192",
+    component: DatabaseJsonImportIssue192,
   },
   {
     path: "/databasemigrate",

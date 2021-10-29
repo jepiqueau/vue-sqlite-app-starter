@@ -33,6 +33,9 @@
         <IonItem>
           <ion-button @click="() => router.push('/databasejsonimportissue177')">SQLite Json Import Issue#177</ion-button>
         </IonItem> 
+        <IonItem>
+          <ion-button @click="() => router.push('/databasejsonimportissue192')">SQLite Json Import Issue#192</ion-button>
+        </IonItem> 
 
         
         <IonItem v-if="isNative">

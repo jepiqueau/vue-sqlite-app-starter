@@ -377,3 +377,41 @@ export const schemaToImport179 = {
     },
   ],
 };
+export const fullImport192 = {
+  database: 'storage-192', 
+  version: 1, 
+  encrypted: false, 
+  mode: 'full', 
+  tables: [ 
+    { name: 'routes', 
+      schema: [ 
+        { column: 'id', value: 'TEXT NOT NULL'},
+        { column: 'name', value: 'TEXT NOT NULL' }, 
+        { column: 'date', value: 'TEXT NOT NULL' }, 
+        { constraint: 'routes_pk', value: 'PRIMARY KEY (id)'},
+      ], 
+      indexes: [ 
+        { name: 'routes_id_uindex', value: 'id' }, 
+        { name: 'routes_name_uindex', value: 'name' }, 
+      ], 
+    }, 
+    { name: 'route_points', 
+      schema: [ 
+        { column: 'id', value: 'INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL' },
+        { column: 'route_id', value: 'TEXT NOT NULL' }, 
+        { column: 'accuracy', value: 'REAL' }, 
+        { column: 'altitude', value: 'REAL' }, 
+        { column: 'altitudeAccuracy', value: 'REAL' }, 
+        { column: 'heading', value: 'REAL' }, 
+        { column: 'latitude', value: 'REAL' }, 
+        { column: 'longitude', value: 'REAL' }, 
+        { column: 'speed', value: 'REAL' }, 
+        { column: 'TIMESTAMP', value: 'INTEGER' }, 
+        { foreignkey: 'route_id', value: 'REFERENCES routes(id) ON DELETE CASCADE', }, 
+      ], 
+      indexes: [ 
+        { name: 'route_points_id_uindex', value: 'id' }, 
+      ], 
+    }, 
+  ], 
+};
