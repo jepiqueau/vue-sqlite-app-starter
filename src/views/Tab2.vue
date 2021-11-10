@@ -60,7 +60,7 @@
   import { defineComponent, getCurrentInstance, onMounted } from 'vue';
   import { useRouter } from 'vue-router';
   import ModalJsonMessages from '@/components/ModalJsonMessages.vue';
-  import { SQLiteHook } from 'vue-sqlite-hook/dist';
+  import { SQLiteHook } from 'vue-sqlite-hook';
   import { useState } from '@/composables/state';
 
   export default defineComponent({

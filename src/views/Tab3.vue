@@ -27,7 +27,7 @@
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import { defineComponent, onMounted, getCurrentInstance, ref } from 'vue';
-import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook/dist';
+import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook';
 
 export default defineComponent({ 
   name: 'Tab3',

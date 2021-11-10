@@ -7,7 +7,7 @@
 <script lang="ts">
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent, getCurrentInstance} from 'vue';
-import { useSQLite} from 'vue-sqlite-hook/dist';
+import { useSQLite} from 'vue-sqlite-hook';
 
 export default defineComponent({
   name: 'App',
