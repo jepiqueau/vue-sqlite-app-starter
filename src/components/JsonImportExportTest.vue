@@ -90,7 +90,7 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending testFullImportFromJson *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -153,7 +153,7 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending testPartialImportFromJson *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -185,7 +185,7 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending testFullExportToJson \n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -231,7 +231,7 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending testPartialExportToJson \n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -248,7 +248,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
-            catch (err) {
+            catch (err: any) {
                 setShowSpinner(false);
                 setLog(log.value
                     .concat(`> Error: ${err} \n`));

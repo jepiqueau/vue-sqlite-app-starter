@@ -80,7 +80,8 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending testJsonImportIssue177 *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
+                console.log(`&&&& Erreur: ${JSON.stringify(err)}`)
                 return Promise.reject(err.message);
             }
         }
@@ -94,7 +95,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
-            catch (err) {
+            catch (err: any) {
                 setShowSpinner(false);
                 setLog(log.value
                     .concat(`> Error: ${err} \n`));
@@ -102,6 +103,7 @@ export default defineComponent({
                     .concat("* testJsonImportIssue177 failed *\n"));
                 setLog(log.value
                         .concat("\n* The set of tests failed *\n"));
+                console.log(`&&&& Erreur before Alert: ${err}`)
                 await showAlert(err);
             }
         });

@@ -114,7 +114,7 @@ export default defineComponent({
                 setLog(log.value.concat("> closeConnection successful\n"));
                 setLog(log.value.concat("* Ending setDatabase *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
 
@@ -151,7 +151,7 @@ export default defineComponent({
 
                 setLog(log.value.concat("* Ending jsonImportPartialTest *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -179,7 +179,7 @@ export default defineComponent({
                 setLog(log.value.concat("> Export 'full' successful\n"));    
                 setLog(log.value.concat("* Ending jsonExportFullTest \n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -226,7 +226,7 @@ export default defineComponent({
                 }
                 setLog(log.value.concat("* Ending jsonImportFullTest *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
 
@@ -258,7 +258,7 @@ export default defineComponent({
 
                 setLog(log.value.concat("* Ending jsonImportFullTest *\n"));
                 return Promise.resolve();
-            } catch (err) {
+            } catch (err: any) {
                 return Promise.reject(err.message);
             }
         }
@@ -277,7 +277,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("\n* The set of tests was successful *\n"));
             }
-            catch (err) {
+            catch (err: any) {
                 app?.appContext.config.globalProperties.$isJsonListeners.setJsonListeners(false);
                 setShowSpinner(false);
                 setLog(log.value

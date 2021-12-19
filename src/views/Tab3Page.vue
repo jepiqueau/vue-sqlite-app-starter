@@ -30,7 +30,6 @@ import { defineComponent, onMounted, getCurrentInstance, ref } from 'vue';
 import { SQLiteDBConnection, SQLiteHook } from 'vue-sqlite-hook';
 
 export default defineComponent({ 
-  name: 'Tab3',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
   setup() {
     const initTests: any[] = [];

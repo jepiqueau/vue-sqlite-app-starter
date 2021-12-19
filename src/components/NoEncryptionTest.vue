@@ -146,7 +146,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("* Ending testDatabaseNoEncryption *\n"));
                 return true;
-            } catch (err) {
+            } catch (err: any) {
                 errMess = `${err.message}`;
                 return false;
             }

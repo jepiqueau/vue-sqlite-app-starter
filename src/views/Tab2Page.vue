@@ -44,6 +44,9 @@
         <IonItem v-if="isNative">
           <ion-button @click="() => router.push('/databasemigrate')">SQLite Database Migrate</ion-button>
         </IonItem> 
+        <IonItem v-if="isNative">
+          <ion-button @click="() => router.push('/ncdatabase')">Non-Conformed Database</ion-button>
+        </IonItem> 
       </IonList>
       <ModalJsonMessages :is-open="isModalOpen.isModal.value"
                          :message="contentMessage.message.value" 
@@ -64,7 +67,6 @@
   import { useState } from '@/composables/state';
 
   export default defineComponent({
-    name: 'Tab2',
     components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,
                   IonButton, IonList, IonItem, ModalJsonMessages },
     setup() {

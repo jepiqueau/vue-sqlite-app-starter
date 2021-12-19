@@ -199,7 +199,7 @@ export default defineComponent({
                     setLog(log.value
                         .concat("* Ending testDatabaseToEncrypt *\n"));
                     return true;
-                } catch (err) {
+                } catch (err: any) {
                     errMess = `${err.message}`;
                     return false;
                 }
