@@ -103,8 +103,8 @@ export default defineComponent({
                 setLog(log.value
                     .concat("* Ending testDatabaseCopyFromAssets *\n"));
                 return true;
-            } catch (err) {
-                errMess = `${err}`;
+            } catch (err: any) {
+                errMess = err.message ? `${err.message}` : err;
                 return false;
             }
         }

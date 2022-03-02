@@ -107,8 +107,9 @@ export default defineComponent({
                     return Promise.reject(new Error(`Not available on ${platform} platform`));
                 }                    
                 return true;
-            } catch (err) {
-                errMess = `${err}`;
+            } catch (err: any) {
+                errMess = err.message ? `${err.message}` : err;
+
                 return false;
             }
         };

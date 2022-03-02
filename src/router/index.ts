@@ -17,6 +17,7 @@ import DatabaseJsonImportIssue177 from "@/views/DatabaseJsonImportIssue177.vue";
 import DatabaseMigrate from "@/views/DatabaseMigrate.vue";
 import DatabaseJsonImportIssue192 from "@/views/DatabaseJsonImportIssue192.vue";
 import NCDatabase from "@/views/NCDatabase.vue";
+import DatabaseTransaction from "@/views/DatabaseTransaction.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -59,6 +60,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/databaseexistingconnection",
     name: "DatabaseExistingConn",
     component: DatabaseExistingConn,
+  },
+  {
+    path: "/databasetransaction",
+    name: "DatabaseTransaction",
+    component: DatabaseTransaction,
   },
   {
     path: "/databasecopyfromassets",

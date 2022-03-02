@@ -143,7 +143,7 @@ export default defineComponent({
                     .concat("* Ending testDatabaseTwoDbs *\n"));
                 return true;
             } catch (err: any) {
-                errMess = `${err.message}`;
+                errMess = err.message ? `${err.message}` : err;
                 return false;
             }
         }

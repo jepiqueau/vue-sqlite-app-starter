@@ -61,3 +61,9 @@ export const setUsers: Array<capSQLiteSet>  = [
       values:["Bush","Bush@example.com",42]
     },
   ];
+export const createSchemaIssue230 = `
+CREATE TABLE IF NOT EXISTS DemoTable (
+  name TEXT,
+  score INTEGER
+);
+`

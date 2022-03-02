@@ -22,6 +22,9 @@
           <ion-button @click="() => router.push('/databaseexistingconnection')">SQLite Existing Connection</ion-button>
         </IonItem>
         <IonItem>
+          <ion-button @click="() => router.push('/databasetransaction')">SQLite Transaction</ion-button>
+        </IonItem>
+        <IonItem>
           <ion-button @click="() => router.push('/databasecopyfromassets')">SQLite CopyFromAssets</ion-button>
         </IonItem> 
         <IonItem>
