@@ -7,13 +7,17 @@ export const createTablesExecuteSet =  `
         company TEXT,
         size REAL,
         age INTEGER,
-        MobileNumber TEXT
+        MobileNumber TEXT,
+        sql_deleted BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1)),
+        last_modified INTEGER DEFAULT (strftime('%s', 'now'))
     );
     CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY NOT NULL,
         userid INTEGER,
         title TEXT NOT NULL,
         body TEXT NOT NULL,
+        sql_deleted BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1)),
+        last_modified INTEGER DEFAULT (strftime('%s', 'now')),
         FOREIGN KEY (userid) REFERENCES users(id) ON DELETE CASCADE
     );
     CREATE INDEX IF NOT EXISTS users_index_name ON users (name);

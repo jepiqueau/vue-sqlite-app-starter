@@ -2,7 +2,9 @@ export const createTablesEncrypted = `
     CREATE TABLE IF NOT EXISTS contacts (
         id INTEGER PRIMARY KEY NOT NULL,
         email TEXT UNIQUE NOT NULL,
-        name TEXT
+        name TEXT,
+        sql_deleted BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1)),
+        last_modified INTEGER DEFAULT (strftime('%s', 'now'))
     );
     PRAGMA user_version = 1;
 `;

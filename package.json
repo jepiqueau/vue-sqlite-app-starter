@@ -1,6 +1,6 @@
 {
   "name": "vue-sqlite-app-starter",
-  "version": "3.4.0",
+  "version": "4.1.0-5",
   "description": "Ionic/Vue SQLite Application Starter",
   "author": "Jean Pierre Quéau",
   "license": "MIT",
@@ -8,31 +8,33 @@
   "private": true,
   "scripts": {
     "update": "npm install --save-dev @capacitor-community/sqlite@next --save-dev vue-sqlite-hook@next",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "npm run copysqlwasm && vue-cli-service serve",
+    "build": "npm run copysqlwasm && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "copysqlwasm": "copyfiles -u 3 node_modules/sql.js/dist/sql-wasm.wasm public/assets"
   },
   "dependencies": {
     "@capacitor-community/electron": "^4.1.0",
-    "@capacitor/android": "^3.4.0",
-    "@capacitor/app": "1.1.0",
-    "@capacitor/core": "^3.4.0",
-    "@capacitor/dialog": "^1.0.7",
-    "@capacitor/haptics": "1.1.4",
-    "@capacitor/ios": "^3.4.0",
-    "@capacitor/keyboard": "1.2.2",
-    "@capacitor/status-bar": "1.0.8",
+    "@capacitor-community/sqlite": "^4.1.0-5",
+    "@capacitor/android": "^4.0.0",
+    "@capacitor/app": "^4.0.0",
+    "@capacitor/core": "^4.0.0",
+    "@capacitor/dialog": "^4.0.0",
+    "@capacitor/haptics": "^4.0.0",
+    "@capacitor/ios": "^4.0.0",
+    "@capacitor/keyboard": "^4.0.0",
+    "@capacitor/status-bar": "^4.0.0",
     "@ionic/vue": "^6.0.9",
     "@ionic/vue-router": "^6.0.9",
     "core-js": "^3.6.5",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "vue-sqlite-hook": "^3.0.1"
   },
   "devDependencies": {
-    "@capacitor-community/sqlite": "^3.4.0",
-    "@capacitor/cli": "^3.4.0",
+    "@capacitor/cli": "^4.0.0",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
@@ -47,14 +49,13 @@
     "@vue/test-utils": "^2.0.0-rc.17",
     "@vue/vue3-jest": "^27.0.0-alpha.4",
     "babel-jest": "^27.5.1",
+    "copyfiles": "^2.4.1",
     "cypress": "^9.5.1",
     "eslint": "^8.10.0",
     "eslint-plugin-vue": "^8.5.0",
-    "jeep-sqlite": "^1.3.6",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.3",
-    "typescript": "4.5.5",
-    "vue-sqlite-hook": "^2.1.6"
+    "typescript": "4.5.5"
   },
   "repository": {
     "type": "git",

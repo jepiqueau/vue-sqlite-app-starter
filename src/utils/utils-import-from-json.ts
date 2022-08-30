@@ -14,7 +14,8 @@ export const dataToImport: any = {
                 {column:"email", value:"TEXT UNIQUE NOT NULL"},
                 {column:"name", value:"TEXT"},
                 {column:"age", value:"REAL"},
-                {column:"last_modified", value:"INTEGER"}
+                {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+                {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
             ],
             indexes: [
                 {name: "index_user_on_name",value: "name"},
@@ -22,10 +23,10 @@ export const dataToImport: any = {
                 {name: "index_user_on_email_name", value: "email ASC, name", mode: "UNIQUE"}
             ],
             values: [
-                [1,"Whiteley.com","Whiteley",40.5,1582536810],
-                [2,"Jones.com","Jones",44.2,1582812800],
-                [3,"Simpson@example.com","Simpson",69,1583570630],
-                [4,"Brown@example.com","Brown",15,1590383895]
+                [1,"Whiteley.com","Whiteley",40.5,0,1582536810],
+                [2,"Jones.com","Jones",44.2,0,1582812800],
+                [3,"Simpson@example.com","Simpson",69,0,1583570630],
+                [4,"Brown@example.com","Brown",15,0,1590383895]
             ]
         },
         {
@@ -34,11 +35,12 @@ export const dataToImport: any = {
             {column:"id", value: "INTEGER PRIMARY KEY NOT NULL"},
             {column:"title", value:"TEXT NOT NULL"},
             {column:"body", value:"TEXT NOT NULL"},
-            {column:"last_modified", value:"INTEGER"}
-          ],
+            {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+            {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
+      ],
           values: [
-              [1,"test post 1","content test post 1",1587310030],
-              [2,"test post 2","content test post 2",1590388125]
+              [1,"test post 1","content test post 1",0,1587310030],
+              [2,"test post 2","content test post 2",0,1590388125]
           ]
         },
         {
@@ -49,11 +51,12 @@ export const dataToImport: any = {
             {column:"type", value:"TEXT NOT NULL"},
             {column:"size", value:"INTEGER"},
             {column:"img", value:"BLOB"},
-            {column:"last_modified", value:"INTEGER"}
-          ],
+            {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+            {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
+      ],
           values: [
-            [1,"feather","png","NULL",Images[1],1582536810],
-            [2,"meowth","png","NULL",Images[0],1590151132]
+            [1,"feather","png",null,Images[1],0,1582536810],
+            [2,"meowth","png",null,Images[0],0,1590151132]
           ]
         }
       
@@ -69,9 +72,9 @@ export const partialImport1: any = {
         {
             name: "users",
             values: [
-                [5,"Addington.com","Addington",22,1590388335],
-                [6,"Bannister.com","Bannister",59,1590393015],
-                [2,"Jones@example.com","Jones",45,1590393325]
+                [5,"Addington.com","Addington",22,0,1590388335],
+                [6,"Bannister.com","Bannister",59,0,1590393015],
+                [2,"Jones@example.com","Jones",45,0,1590393325]
 
             ]
         },
@@ -83,8 +86,8 @@ export const partialImport1: any = {
 
           ],
           values: [
-              [3,"test post 3","content test post 3",1590396146],
-              [4,"test post 4","content test post 4",1590396288]
+              [3,"test post 3","content test post 3",0,1590396146],
+              [4,"test post 4","content test post 4",0,1590396288]
           ]
         }
 
@@ -102,7 +105,8 @@ export const tableTwoImports: any = {
           { column: "id", value: "INTEGER PRIMARY KEY NOT NULL" },
           { column: "name", value: "TEXT" },
           { column: "favourite", value: "INTEGER" },
-          { column:"last_modified", value:"INTEGER"},
+          {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+          {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
         ],
       },
       {
@@ -111,7 +115,8 @@ export const tableTwoImports: any = {
           { column: "id", value: "INTEGER PRIMARY KEY NOT NULL" },
           { column: "name", value: "TEXT" },
           { column: "favourite", value: "INTEGER" },
-          { column:"last_modified", value:"INTEGER"},
+          {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+          {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
         ],
       },
       {
@@ -120,7 +125,8 @@ export const tableTwoImports: any = {
           { column: "id", value: "INTEGER PRIMARY KEY NOT NULL" },
           { column: "name", value: "TEXT" },
           { column: "favourite", value: "INTEGER" },
-          { column:"last_modified", value:"INTEGER"},
+          {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+          {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
         ],
       },
     ],
@@ -134,28 +140,28 @@ export const dataTwoImports: any = {
       {
         name: "areas",
         values: [
-          [1, "Access road", 0, 1590396146],
-          [2, "Accessway", 0, 1590396146],
-          [3, "Air handling system", 0, 1590396146],
+          [1, "Access road", 0, 0, 1590396146],
+          [2, "Accessway", 0, 0, 1590396146],
+          [3, "Air handling system", 0, 0, 1590396146],
         ],
 
       },
       {
         name: "elements",
         values: [
-          [1, "Access door < 3m in height", 0, 1590396288],
-          [2, "Access door > 3m in height", 0, 1590396288],
-          [3, "Air inflitration", 0, 1590396288],
-          [4, "Air ventilation", 0, 1590396288],
+          [1, "Access door < 3m in height", 0, 0, 1590396288],
+          [2, "Access door > 3m in height", 0, 0, 1590396288],
+          [3, "Air inflitration", 0, 0, 1590396288],
+          [4, "Air ventilation", 0, 0, 1590396288],
         ],
       },
       {
         name: "issues",
         values: [
-          [1, "Accumulation of internal moisture", 0, 1590388335],
-          [2, "Backflow prevention device", 0, 1590388335],
-          [3, "Backpressure", 0, 1590388335],
-          [4, "Backsiphonage", 0, 1590388335],
+          [1, "Accumulation of internal moisture", 0, 0, 1590388335],
+          [2, "Backflow prevention device", 0, 0, 1590388335],
+          [3, "Backpressure", 0, 0, 1590388335],
+          [4, "Backsiphonage", 0, 0, 1590388335],
         ],
       },
     ],
@@ -170,13 +176,14 @@ CREATE TABLE IF NOT EXISTS teachers (
     age INT,
     phone DECIMAL(11,0),
     birth_date DATE,
+    sql_deleted BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1)),
     last_modified INTEGER DEFAULT (strftime('%s', 'now'))
 );
 CREATE INDEX IF NOT EXISTS teachers_index_email ON teachers (email);
 CREATE INDEX IF NOT EXISTS teachers_index_last_modified ON teachers (last_modified);
 CREATE TRIGGER IF NOT EXISTS teachers_trigger_last_modified
 AFTER UPDATE ON teachers
-FOR EACH ROW WHEN NEW.last_modified <= OLD.last_modified
+FOR EACH ROW WHEN NEW.last_modified < OLD.last_modified
 BEGIN
     UPDATE teachers SET last_modified= (strftime('%s', 'now')) WHERE id=OLD.id;
 END;
@@ -215,26 +222,26 @@ export const partialImport112: any = {
         {
             name: "teachers",
             values: [
-              [21,"name21@example.com","Name21",null,null,null,null,null,1618634218],
-              [22,"name22@example.com","Name22",null,null,null,null,null,1618644218],
-              [23,"name23@example.com","Name23",null,null,null,null,null,1618654218],
-              [24,"name24@example.com","Name24",null,null,null,null,null,1618634218],
-              [25,"name25@example.com","Name25",null,null,null,null,null,1618644218],
-              [26,"name26@example.com","Name26",null,null,null,null,null,1618654218],
-              [27,"name27@example.com","Name27",null,null,null,null,null,1618634218],
-              [28,"name28@example.com","Name28",null,null,null,null,null,1618644218],
-              [29,"name29@example.com","Name29",null,null,null,null,null,1618654218],
-              [30,"name30@example.com","Name30",null,null,null,null,null,1618654218],
-              [31,"name31@example.com","Name31",null,null,null,44903671234,null,1618634218],
-              [32,"name32@example.com","Name32","AVD",null,null,null,null,1618644218],
-              [33,"name33@example.com","Name33","BKC",null,43,31671424567,"1978-12-03",1618654218],
-              [34,"name34@example.com","Name34",null,null,null,44905671134,null,1618634218],
-              [35,"name35@example.com","Name35","CBN",null,null,null,null,1618644218],
-              [36,"name36@example.com","Name36","KWK",null,52,31671434467,"1969-08-20",1618654218],
-              [37,"name37@example.com","Name37",null,null,null,44905671235,null,1618634218],
-              [38,"name38@example.com","Name38","CDK",null,null,null,null,1618644218],
-              [39,"name39@example.com","Name39","ZWK",null,42,null,"1979-02-03",1618654218],
-              [40,"name40@example.com","Name40","PNC",null,47,31671434568,"1974-06-02",1618654218],
+              [21,"name21@example.com","Name21",null,null,null,null,null,0,1618634218],
+              [22,"name22@example.com","Name22",null,null,null,null,null,0,1618644218],
+              [23,"name23@example.com","Name23",null,null,null,null,null,0,1618654218],
+              [24,"name24@example.com","Name24",null,null,null,null,null,0,1618634218],
+              [25,"name25@example.com","Name25",null,null,null,null,null,0,1618644218],
+              [26,"name26@example.com","Name26",null,null,null,null,null,0,1618654218],
+              [27,"name27@example.com","Name27",null,null,null,null,null,0,1618634218],
+              [28,"name28@example.com","Name28",null,null,null,null,null,0,1618644218],
+              [29,"name29@example.com","Name29",null,null,null,null,null,0,1618654218],
+              [30,"name30@example.com","Name30",null,null,null,null,null,0,1618654218],
+              [31,"name31@example.com","Name31",null,null,null,44903671234,null,0,1618634218],
+              [32,"name32@example.com","Name32","AVD",null,null,null,null,0,1618644218],
+              [33,"name33@example.com","Name33","BKC",null,43,31671424567,"1978-12-03",0,1618654218],
+              [34,"name34@example.com","Name34",null,null,null,44905671134,null,0,1618634218],
+              [35,"name35@example.com","Name35","CBN",null,null,null,null,0,1618644218],
+              [36,"name36@example.com","Name36","KWK",null,52,31671434467,"1969-08-20",0,1618654218],
+              [37,"name37@example.com","Name37",null,null,null,44905671235,null,0,1618634218],
+              [38,"name38@example.com","Name38","CDK",null,null,null,null,0,1618644218],
+              [39,"name39@example.com","Name39","ZWK",null,42,null,"1979-02-03",0,1618654218],
+              [40,"name40@example.com","Name40","PNC",null,47,31671434568,"1974-06-02",0,1618654218],
             ]
         },
         {
@@ -246,7 +253,8 @@ export const partialImport112: any = {
                 {column:"timeStart", value:"FLOAT"},
                 {column:"timeEnd", value:"FLOAT"},
                 {column:"teacherId", value:"INTEGER"},
-                {column:"last_modified", value:"INTEGER"},
+                {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+                {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
                 {foreignkey: "teacherId", value:"REFERENCES teachers(id) ON DELETE CASCADE"}
             ],
             indexes: [
@@ -257,22 +265,22 @@ export const partialImport112: any = {
                 {
                   name: "classes_trigger_last_modified",
                   timeevent: "AFTER UPDATE",
-                  logic: "FOR EACH ROW WHEN NEW.last_modified <= OLD.last_modified BEGIN UPDATE images SET last_modified= (strftime('%s', 'now')) WHERE id=OLD.id;END;"
+                  logic: "FOR EACH ROW WHEN NEW.last_modified < OLD.last_modified BEGIN UPDATE images SET last_modified= (strftime('%s', 'now')) WHERE id=OLD.id;END;"
                 }
             ],
             values: [
-                [1,1,"Monday",8.30,10.00,1,1618634218],
-                [2,2,"Wednesday",14.00,15.00,2,1618634218],
-                [3,1,"Friday",10.00,12.00,1,1618634218],
-                [4,10,"Tuesday",8.30,10.00,10,1618634218],
-                [5,3,"Thursday",14.00,15.00,12,1618634218],
-                [6,5,"Friday",10.00,12.00,21,1618634218],
-                [7,5,"Monday",8.30,10.00,11,1618634218],
-                [8,10,"Wednesday",14.00,15.00,12,1618634218],
-                [9,3,"Friday",10.00,12.00,15,1618634218],
-                [10,1,"Monday",8.30,10.00,17,1618634218],
-                [11,2,"Wednesday",14.00,15.00,32,1618634218],
-                [12,1,"Friday",10.00,12.00,24,1618634218],
+                [1,1,"Monday",8.30,10.00,1,0,1618634218],
+                [2,2,"Wednesday",14.00,15.00,2,0,1618634218],
+                [3,1,"Friday",10.00,12.00,1,0,1618634218],
+                [4,10,"Tuesday",8.30,10.00,10,0,1618634218],
+                [5,3,"Thursday",14.00,15.00,12,0,1618634218],
+                [6,5,"Friday",10.00,12.00,21,0,1618634218],
+                [7,5,"Monday",8.30,10.00,11,0,1618634218],
+                [8,10,"Wednesday",14.00,15.00,12,0,1618634218],
+                [9,3,"Friday",10.00,12.00,15,0,1618634218],
+                [10,1,"Monday",8.30,10.00,17,0,1618634218],
+                [11,2,"Wednesday",14.00,15.00,32,0,1618634218],
+                [12,1,"Friday",10.00,12.00,24,0,1618634218],
             ]
         }
     ]
@@ -296,8 +304,9 @@ export const fullImport177: any = {
               { "column": "recordType", "value": "INTEGER DEFAULT 0 NOT NULL" },
               { "column": "editable", "value": "INTEGER DEFAULT 0 NOT NULL" },
               { "column": "deletable", "value": "INTEGER DEFAULT 0 NOT NULL" },
-              { "column": "last_modified", "value":"INTEGER DEFAULT (strftime('%s', 'now'))" }
-          ],
+              { "column":'sql_deleted', "value":'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+              { "column":'last_modified', "value":'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'}
+      ],
           "indexes": [
               {"name": "index_ticket_on_last_modified","value": "last_modified DESC"},
               {"name": "index_ticket_on_title_desc", "value": "title ASC, desc"}
@@ -324,7 +333,8 @@ export const fullImport177: any = {
           { "column": "recordType", "value": "INTEGER DEFAULT 0 NOT NULL" },
           { "column": "editable", "value": "INTEGER DEFAULT 0 NOT NULL" },
           { "column": "deletable", "value": "INTEGER DEFAULT 0 NOT NULL" },
-          { "column": "last_modified", "value": "INTEGER DEFAULT (strftime('%s', 'now'))" },
+          { "column":'sql_deleted', "value":'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+          { "column":'last_modified', "value":'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
           { "foreignkey": "ticketId", "value": "REFERENCES tickets(id) ON DELETE CASCADE" }
         ],
         "indexes": [
@@ -346,7 +356,8 @@ export const schemaToImport179 = {
         { column: 'albumartist', value: 'TEXT NOT NULL' },
         { column: 'albumname', value: 'TEXT NOT NULL' },
         { column: 'albumcover', value: 'BINARY' },
-        { column: 'last_modified', value: 'INTEGER' },
+        {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+        {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
         { constraint: 'PK_albumartist_albumname', value: 'PRIMARY KEY (albumartist,albumname)'},
       ],
       indexes: [
@@ -361,7 +372,8 @@ export const schemaToImport179 = {
         { column: 'songartist', value: 'TEXT NOT NULL' },
         { column: 'songalbum', value: 'TEXT NOT NULL' },
         { column: 'songname', value: 'TEXT NOT NULL' },
-        { column: 'last_modified', value: 'INTEGER' },
+        {column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+        {column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
         {
           foreignkey: 'songartist,songalbum',
           value: 'REFERENCES album(albumartist,albumname)',
@@ -388,6 +400,8 @@ export const fullImport192 = {
         { column: 'id', value: 'TEXT NOT NULL'},
         { column: 'name', value: 'TEXT NOT NULL' }, 
         { column: 'date', value: 'TEXT NOT NULL' }, 
+        { column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+        { column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
         { constraint: 'routes_pk', value: 'PRIMARY KEY (id)'},
       ], 
       indexes: [ 
@@ -407,6 +421,8 @@ export const fullImport192 = {
         { column: 'longitude', value: 'REAL' }, 
         { column: 'speed', value: 'REAL' }, 
         { column: 'TIMESTAMP', value: 'INTEGER' }, 
+        { column:'sql_deleted', value:'BOOLEAN DEFAULT 0 CHECK (sql_deleted IN (0, 1))'},
+        { column:'last_modified', value:'INTEGER DEFAULT (strftime(\'%s\', \'now\'))'},
         { foreignkey: 'route_id', value: 'REFERENCES routes(id) ON DELETE CASCADE', }, 
       ], 
       indexes: [ 
