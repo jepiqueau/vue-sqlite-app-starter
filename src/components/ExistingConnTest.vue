@@ -110,12 +110,12 @@ export default defineComponent({
                         errMess = `retrieveAllConnections not returning 2 values`;
                         return false;
                     }
-                    if(!retDict.has("testNew") || retDict.get("testNew") !== db) {
-                        errMess = `retrieveAllConnections not returning "testNew"`;
+                    if(!retDict.has("RW_testNew") || retDict.get("RW_testNew") !== db) {
+                        errMess = `retrieveAllConnections not returning "RW_testNew"`;
                         return false;
                     }
-                    if(!retDict.has("testSet") || retDict.get("testSet") !== db1) {
-                        errMess = `retrieveAllConnections not returning "testSet"`;
+                    if(!retDict.has("RW_testSet") || retDict.get("RW_testSet") !== db1) {
+                        errMess = `retrieveAllConnections not returning "RW_testSet"`;
                         return false;
                     }
                     // close all connections

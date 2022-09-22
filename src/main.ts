@@ -68,12 +68,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // example: database creation with standard SQLite statements 
     const ret = await sqlite.checkConnectionsConsistency();
-    const isConn = (await sqlite.isConnection("db_tab3")).result;
+    const isConn = (await sqlite.isConnection("db_tab3", false)).result;
     let db: SQLiteDBConnection
     if (ret.result && isConn) {
-      db = await sqlite.retrieveConnection("db_tab3");
+      db = await sqlite.retrieveConnection("db_tab3", false);
     } else {
-      db = await sqlite.createConnection("db_tab3", false, "no-encryption", 1);
+      db = await sqlite.createConnection("db_tab3", false, "no-encryption", 1, false);
     }
     await db.open();
     const query = `
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     if(res.changes && res.changes.changes && res.changes.changes < 0) {
       throw new Error(`Error: execute failed`);
     }
-    await sqlite.closeConnection("db_tab3");
+    await sqlite.closeConnection("db_tab3", false);
 
     // example: database creation from importFromJson 
     const result = await sqlite.isJsonValid(JSON.stringify(schemaToImport179));
