@@ -52,7 +52,7 @@ export default defineComponent({
                 setLog(log.value
                     .concat("* Starting testTransaction *\n"));
                 // test the plugin with echo
-                let res: any = await sqlite.echo("Hello from echo");
+                const res: any = await sqlite.echo("Hello from echo");
                 if(res.value !== "Hello from echo"){
                     errMess = `Echo not returning "Hello from echo"`;
                     return false;

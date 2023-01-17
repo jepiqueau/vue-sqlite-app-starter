@@ -39,16 +39,16 @@ export default defineComponent({
     const sqlite: SQLiteHook = app?.appContext.config.globalProperties.$sqlite;
     const tab3Test = async (): Promise<boolean>  => {
       try {
-        let db: SQLiteDBConnection = await sqlite.createConnection("db_tab3");
+        const db: SQLiteDBConnection = await sqlite.createConnection("db_tab3");
         await db.open();
-        let randomText = (Math.random() + 1).toString(36).substring(7);
+        const randomText = (Math.random() + 1).toString(36).substring(7);
         await db.run("INSERT INTO test (name) VALUES (?)", [randomText]);
-        let res: any = await db.query("SELECT * FROM test");
+        const res: any = await db.query("SELECT * FROM test");
         console.log(`query ${JSON.stringify(res)}`);
         tests.value = res.values;
         console.log(`tests ${JSON.stringify(tests.value)}`);
 
-        let isTable = await db.isTable("test");
+        const isTable = await db.isTable("test");
         console.log(`isTable test: ${JSON.stringify(isTable)}`)
         await db.close();
         await sqlite.closeConnection("db_tab3");

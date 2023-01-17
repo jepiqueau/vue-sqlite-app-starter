@@ -4,14 +4,14 @@
 <p align="center"><strong><code>vue-sqlite-app-starter</code></strong></p>
 <p align="center">Ionic/Vue application demonstrating the use of the</p>
 <p align="center"><strong><code>@capacitor-community/sqlite plugin<code></strong></p>
-<p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 3 </strong></p><br>
+<p align="center" style="font-size:50px;color:red"><strong>CAPACITOR 4 </strong></p><br>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" />
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/license/jepiqueau/vue-sqlite-app-starter?style=flat-square" /></a>
   <a href="https://github.com/jepiqueau/vue-sqlite-app-starter"><img src="https://img.shields.io/github/package-json/v/jepiqueau/vue-sqlite-app-starter/main?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-2-orange?style=flat-square" /></a>
+<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-3-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
@@ -36,19 +36,13 @@ git clone https://github.com/jepiqueau/vue-sqlite-app-starter.git
 cd ./vue-sqlite-app-starter
 git remote remove origin
 npm install
+npm run electron:install
 ```
 
 To install the latest release of the ```@capacitor-community/sqlite``` plugin
 
 ```bash
 npm run update
-npm run build 
-npx cap sync
-npx cap sync @capacitor-community/electron
-npm run build
-npx cap copy
-npx cap copy web
-npx cap copy @capacitor-community/electron
 ```
 
 ## Running the app
@@ -57,28 +51,37 @@ The assets databases should be in the `public/assets/databases`folder
 
 ### BROWSER
 
-The `sql-wasm.wasm` file should be copied from `node_modules/sql.js/dist`folder to `public/assets`folder
-
 ```
 npx run serve
+```
+or
+```
+ionic serve
 ```
 
 ### IOS
 
 ```
-npx cap open ios
+npm run ionic:ios
 ```
+
+Once Xcode launches, you can build your app through the standard Xcode workflow.
 
 ### ANDROID
 
 ```
 npx cap open android
 ```
+Once Android Studio launches, make sure that you are using 
+ - Gradle JDK version 11
+ - Android Gradle Plugin Version 7.2.2
+
+and build your app through the standard Android Studio workflow.
 
 ### ELECTRON
 
 ```
-npx cap open @capacitor-community/electron
+npm run electron:start
 ```
 
 ## Accessing the tests 🚧
@@ -93,13 +96,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/jepiqueau"><img src="https://avatars3.githubusercontent.com/u/16580653?v=4" width="100px;" alt=""/><br /><sub><b>Jean Pierre Quéau</b></sub></a><br /><a href="https://github.com/jepiqueau/vue-sqlite-app-starter/commits?author=jepiqueau" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/codeluggage"><img src="https://avatars.githubusercontent.com/u/1154150?v=4" width="100px;" alt=""/><br /><sub><b>Matias Forbord</b></sub></a><br /><a href="https://github.com/jepiqueau/vue-sqlite-app-starter/commits?author=jepiqueau" title="Code">💻</a></td>
-    
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/jepiqueau" title="jepiqueau"><img src="https://github.com/jepiqueau.png?size=100" width="50" height="50"/></a>
+  <a href="https://github.com/codeluggage" title="jepiqueau"><img src="https://github.com/codeluggage.png?size=100" width="50" height="50"/></a>  <a href="https://github.com/RHellenes" title="RHellenes"><img src="https://github.com/RHellenes.png?size=100" width="50" height="50"/></a>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->

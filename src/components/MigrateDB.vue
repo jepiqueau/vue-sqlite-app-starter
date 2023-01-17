@@ -55,7 +55,7 @@ export default defineComponent({
                 // and there are at least two databases "testcopy.db" and "testfromfile.db"
                 // in that directory, that we want to migrate
                 let directory =  "Files/Databases";
-                let cordDbList: string[] = ["testcopy.db","testfromfile.db"];
+                const cordDbList: string[] = ["testcopy.db","testfromfile.db"];
                 if(platform === "ios") directory = "Applications/Files/Databases"
                 if(platform === "android" ) directory = "files/databases";  
                 if(platform === 'ios' || platform === 'android') {

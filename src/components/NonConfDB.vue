@@ -69,7 +69,7 @@ export default defineComponent({
                         // open db testncdb.db
                         await db.open();
                         // get the database version
-                        let retVer = await db.getVersion();
+                        const retVer = await db.getVersion();
                         if (retVer.version !== 1) {
                             return Promise.reject(new Error("GetVersion: version failed"));
                         }
